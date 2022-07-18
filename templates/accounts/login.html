@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="col-4 offset-4 mb-5 mt-5">
+    <h3>Log In</h3>
+    {{ form.media }}
+    <form action="{% url 'accounts:login' %}" method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        {% if request.GET.next %}
+        <input type="hidden" name="next" value="{{ request.GET.next }}">
+        {% endif %}
+        <input class=" btn btn-primary" type="submit" value="Login">
+    </form>
+</div>
+{% endblock %}

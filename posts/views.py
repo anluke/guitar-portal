@@ -1,6 +1,7 @@
 from django.db.models import Count, Q
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.contrib.auth.decorators import login_required
 
 from .forms import CommentForm, PostForm
 from .models import Post, Author
@@ -21,7 +22,7 @@ def get_category_count():
     return queryset
 
 
-# INDEX / HOMEPAGE
+## INDEX / HOMEPAGE
 def index(request):
     featured = Post.objects.filter(featured=True)
     latest = Post.objects.order_by('-timestamp')[0:3]
@@ -39,7 +40,7 @@ def index(request):
     return render(request, 'index.html', context)
 
 
-# BLOG PAGE
+## BLOG PAGE
 def blog(request):
     category_count = get_category_count()
     most_recent = Post.objects.order_by('-timestamp')[:3]
@@ -64,8 +65,7 @@ def blog(request):
     return render(request, 'blog.html', context)
 
 
-# POST PAGE / BLOG CREATION
-
+## POST CREATED 'POST' TO THE BLOG
 def post(request, id):
     category_count = get_category_count()
     most_recent = Post.objects.order_by('-timestamp')[:3]
@@ -86,8 +86,10 @@ def post(request, id):
     return render(request, 'post.html', context)
 
 
+## CREATE POST ##
+@login_required(login_url="/accounts/login/")
 def post_create(request):
-    # title = 'Create'
+    title = 'Create'
     form = PostForm(request.POST or None, request.FILES or None)
     author = get_author(request.user)
     if request.method == "POST":
@@ -98,7 +100,7 @@ def post_create(request):
                 'id': form.instance.id
             }))
     context = {
-        # 'title': title,
+        'title': title,
         'form': form
     }
     return render(request, "post_create.html", context)
@@ -110,3 +112,38 @@ def post_update(request, id):
 
 def post_delete(request, id):
     pass
+
+
+## UPDATE EXISTING POST ##
+@login_required(login_url="/accounts/login/")
+def post_update(request, id):
+    title = 'Update'
+    post = get_object_or_404(Post, id=id)
+    form = PostForm(
+        request.POST or None,
+        request.FILES or None,
+        instance=post)
+    author = get_author(request.user)
+    if request.method == "POST":
+        if form.is_valid():
+            form.instance.author = author
+            form.save()
+            return redirect(reverse("post-detail", kwargs={
+                'id': form.instance.id
+            }))
+    context = {
+        'title': title,
+        'form': form
+    }
+    return render(request, "post_create.html", context)
+
+
+## DELETE POST
+@login_required(login_url="/accounts/login/")
+def post_delete(request, id):
+    post = get_object_or_404(Post, id=id)
+    post.delete()
+    return redirect(reverse("post-list"))
+
+
+# class PostView(models.Model):
