@@ -86,6 +86,8 @@
                 </div>
               </form>
             </div>
+            {% else %}
+            <a href="{% url 'accounts:login' %}" class="btn btn-primary">Login to comment</a>
             {% endif %}
           </div>
         </div>
