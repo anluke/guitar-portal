@@ -146,6 +146,8 @@ MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
+
+
 #TINYMCE TEXT EDITOR
 
 TINYMCE_DEFAULT_CONFIG = {
