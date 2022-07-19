@@ -1,10 +1,11 @@
 from django.db.models import Count, Q
+from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib.auth.decorators import login_required
 
 from .forms import CommentForm, PostForm
-from .models import Post, Author, PostView, AnonPostView
+from .models import Post, Author, PostView
 from marketing.models import Signup
 
 
@@ -13,6 +14,7 @@ def get_author(user):
     if qs.exists():
         return qs[0]
     return None
+
 
 def get_category_count():
     queryset = Post \
@@ -35,7 +37,7 @@ def index(request):
     
     context = {
         'object_list': featured,
-        'latest': latest
+        'latest': latest,
     }
     return render(request, 'index.html', context)
 
@@ -59,7 +61,7 @@ def blog(request):
         'queryset': paginated_queryset,
         'most_recent': most_recent,
         'page_request_var': page_request_var,
-        'category_count': category_count
+        'category_count': category_count,
 
     }
     return render(request, 'blog.html', context)
@@ -70,24 +72,27 @@ def post(request, id):
     category_count = get_category_count()
     most_recent = Post.objects.order_by('-timestamp')[:3]
     post = get_object_or_404(Post, id=id)
+
     if request.user.is_authenticated:
         PostView.objects.get_or_create(user=request.user, post=post)
-    else:
-        AnonPostView.objects.get_or_create(post=post)
+
     form = CommentForm(request.POST or None)
     if request.method == "POST":
         if form.is_valid():
             form.instance.user = request.user
             form.instance.post = post
             form.save()
-            return redirect('post-detail', id=id)
+            return redirect(reverse("post-detail", kwargs={
+                'id': post.pk
+            }))
     context = {
-        'form': form,
         'post': post,
         'most_recent': most_recent,
-        'category_count': category_count
+        'category_count': category_count,
+        'form': form
     }
     return render(request, 'post.html', context)
+
 
 
 ## CREATE POST ##
@@ -109,13 +114,6 @@ def post_create(request):
     }
     return render(request, "post_create.html", context)
 
-
-def post_update(request, id):
-    pass
-
-
-def post_delete(request, id):
-    pass
 
 
 ## UPDATE EXISTING POST ##
