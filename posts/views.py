@@ -1,11 +1,10 @@
-from django.db.models import Count, Q
-from django.contrib import messages
+from django.db.models import Count
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib.auth.decorators import login_required
 
 from .forms import CommentForm, PostForm
-from .models import Post, Author, PostView
+from .models import Post, Author, PostView, AnonPostView
 from marketing.models import Signup
 
 
@@ -45,9 +44,9 @@ def index(request):
 ## BLOG PAGE
 def blog(request):
     category_count = get_category_count()
-    most_recent = Post.objects.order_by('-timestamp')[:3]
+    most_recent = Post.objects.order_by('-timestamp')[0:3]
     post_list = Post.objects.all()
-    paginator = Paginator(post_list, 4)
+    paginator = Paginator(post_list, 3)
     page_request_var = 'page'
     page = request.GET.get(page_request_var)
     try:
@@ -65,6 +64,12 @@ def blog(request):
 
     }
     return render(request, 'blog.html', context)
+
+
+## ABOUT PAGE
+
+def about(request):
+    return render(request, 'about.html')
 
 
 ## POST CREATED 'POST' TO THE BLOG
@@ -96,7 +101,7 @@ def post(request, id):
 
 
 ## CREATE POST ##
-@login_required(login_url="/accounts/login/")
+# @login_required(login_url="/accounts/login/")
 def post_create(request):
     title = 'Create'
     form = PostForm(request.POST or None, request.FILES or None)

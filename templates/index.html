@@ -23,53 +23,17 @@
     <div class="row">
       <div class="col-lg-8">
         <h2 class="h3">Let's have some fun!</h2>
-        <p class="text-big">This portal is for guitar lovers and <strong>covers</strong> wide variety of <strong>guitars
-            from different brands.</strong>. If you are guitar player or a collectionner, share your story with us. It
-          might be a very thing that will incite someone to start playing! </p>
+        <p class="text-big">This portal is for guitar lovers and covers a wide variety of guitars from different brands.
+          Please share your story with us.
+          It might be the very thing that will incite someone to start playing!</p>
+        <p class="text-big"><strong></strong></p>
+      </div>
+      <div class="col-lg-8">
+        <p class="text-big"><strong>To create a post please register using using <a
+              href="{% url 'accounts:signup' %}">Signup</a></strong>.</p>
       </div>
     </div>
   </div>
-</section>
-<section class="featured-posts no-padding-top">
-  <div class="container">
-
-    <!-- Post-->
-    {% for obj in object_list %}
-    <div class="row d-flex align-items-stretch">
-      {% if not forloop.first and not forloop.last %}
-      <div class="image col-lg-5"><img src="{{ obj.thumbnail.url }}" alt="..."></div>
-      {% endif %}
-      <div class="text col-lg-7">
-        <div class="text-inner d-flex align-items-center">
-          <div class="content">
-            <header class="post-header">
-              <div class="category">
-                {% for cat in obj.categories.all %}
-                <a href="#">{{ cat }}</a>
-                {% endfor %}
-              </div>
-              <a href="{{ obj.get_absolute_url }}">
-                <h2 class="h4">{{ obj.title }}</h2>
-              </a>
-            </header>
-            <p>{{ obj.overview }}</p>
-            <footer class="post-footer d-flex align-items-center"><a href="#"
-                class="author d-flex align-items-center flex-wrap">
-                <div class="avatar"><img src="{{ obj.author.profile_picture.url }}" alt="..." class="img-fluid"></div>
-                <div class="title"><span>{{ obj.author }}</span></div>
-              </a>
-              <div class="date"><i class="icon-clock"></i>{{ obj.timestamp|timesince }} ago</div>
-              <div class="comments"><i class="icon-comment"></i>{{ obj.comment_count }}</div>
-            </footer>
-          </div>
-        </div>
-      </div>
-      {% if forloop.first or forloop.last %}
-      <div class="image col-lg-5"><img src="{{ obj.thumbnail.url }}" alt="..."></div>
-      {% endif %}
-    </div>
-    {% endfor %}
-  </div> -->
 </section>
 
 <!-- Divider Section-->
@@ -91,13 +55,13 @@
 <section class="latest-posts">
   <div class="container">
     <header>
-      <h2>Latest from the blog</h2>
-      <p class="text-big">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <h2>LATEST BLOGS</h2>
     </header>
     <div class="row">
       {% for obj in latest %}
       <div class="post col-md-4">
-        <div class="post-thumbnail"><a href="#"><img src="{{ obj.thumbnail.url }}" alt="..." class="img-fluid"></a>
+        <div class="post-thumbnail"><a href="#"><img src="{{ obj.thumbnail.url }}" alt="blog-hero-image"
+              class="img-fluid"></a>
         </div>
         <div class="post-details">
           <div class="post-meta d-flex justify-content-between">
@@ -123,13 +87,14 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <h2>Subscribe to Newsletter</h2>
-        <p class="text-big">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua.</p>
+        <h2>Subscribe to Our Newsletter</h2>
+        <p class="text-big">Please type in your email address. Our newsletter goes out on Friday so keep an eye on your
+          inbox. <i class="fa fa-smile-o" aria-hidden="true"></i>
+        </p>
       </div>
       <div class="col-md-8">
         <div class="form-holder">
-          <form action="." method="POST">
+          <form onsubmit="return sendMail(this);">
             {% csrf_token %}
             <div class="form-group">
               <input type="email" name="email" id="email" placeholder="Type your email address">
