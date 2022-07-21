@@ -4,7 +4,7 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib.auth.decorators import login_required
 
 from .forms import CommentForm, PostForm
-from .models import Post, Author, PostView, AnonPostView
+from .models import Post, Author, PostView
 from marketing.models import Signup
 
 
@@ -23,12 +23,12 @@ def get_category_count():
     return queryset
 
 
-## INDEX / HOMEPAGE
+# INDEX / HOMEPAGE
 def index(request):
     featured = Post.objects.filter(featured=True)
     latest = Post.objects.order_by('-timestamp')[0:3]
 
-    if request.method =="POST":
+    if request.method == "POST":
         email = request.POST["email"]
         new_signup = Signup()
         new_signup.email = email
@@ -41,7 +41,7 @@ def index(request):
     return render(request, 'index.html', context)
 
 
-## BLOG PAGE
+# BLOG PAGE
 def blog(request):
     category_count = get_category_count()
     most_recent = Post.objects.order_by('-timestamp')[0:3]
@@ -66,13 +66,12 @@ def blog(request):
     return render(request, 'blog.html', context)
 
 
-## ABOUT PAGE
-
+# ABOUT PAGE
 def about(request):
     return render(request, 'about.html')
 
 
-## POST CREATED 'POST' TO THE BLOG
+# POST CREATED 'POST' TO THE BLOG
 def post(request, id):
     category_count = get_category_count()
     most_recent = Post.objects.order_by('-timestamp')[:3]
@@ -99,9 +98,8 @@ def post(request, id):
     return render(request, 'post.html', context)
 
 
-
-## CREATE POST ##
-# @login_required(login_url="/accounts/login/")
+# CREATE POST ##
+@login_required(login_url="/accounts/login/")
 def post_create(request):
     title = 'Create'
     form = PostForm(request.POST or None, request.FILES or None)
@@ -120,8 +118,7 @@ def post_create(request):
     return render(request, "post_create.html", context)
 
 
-
-## UPDATE EXISTING POST ##
+# UPDATE EXISTING POST ##
 @login_required(login_url="/accounts/login/")
 def post_update(request, id):
     title = 'Update'
@@ -145,12 +142,9 @@ def post_update(request, id):
     return render(request, "post_create.html", context)
 
 
-## DELETE POST
+# DELETE POST
 @login_required(login_url="/accounts/login/")
 def post_delete(request, id):
     post = get_object_or_404(Post, id=id)
     post.delete()
     return redirect(reverse("post-list"))
-
-
-

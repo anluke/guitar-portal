@@ -1,5 +1,11 @@
 /* your styles go here */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+
+
+/* GENERAL */
+
 html,
 body {
     height: 100%;
@@ -9,12 +15,48 @@ body {
     min-height: 80%;
 }
 
-footer {
+s footer {
     position: relative;
     height: auto;
     clear: both
 }
 
-.navbar-header a {
-    font-size: 1.1rem;
+#logo {
+    font-size: 1.5rem;
+}
+
+#hero-title {
+    font-size: 3.5rem;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgb(252, 252, 252);
+    font-family: 'Roboto', sans-serif;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px;
+}
+
+
+/* NAV */
+
+.nav-link:hover {
+    transform: scale(1.1);
+    color: #ffa69e;
+}
+
+
+/* CREATE FORM */
+.create {
+    max-width: 1000px;
+    margin: 25px auto;
+}
+
+.create-btn {
+    border-radius: 10px;
+}
+
+.create-btn:hover {
+    color: #ffa69e;
+    background-color: black;
+
 }

@@ -1,14 +1,17 @@
-{
-    /* < script type = "text/javascript"
-    src = "https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" >
-        <
-        /script> <
-        script type = "text/javascript" >
-        (function () {
-            emailjs.init("YOUR_PUBLIC_KEY");
-        })(); <
-    /script> */
+function sendMail(contactForm) {
+    emailjs.send('gmail', 'guitar', {
+            from_name: "Guitar Portal",
+            to_email: "contactForm.emailaddress.value"
+        }, 'N6_BpHp-n6GFioyxa')
+        .then(
+            function (response) {
+                console.log('SUCCESS', reponse);
+            },
+            function (error) {
+                console.log('FAILED', error);
+            }
+        );
+    return false;
 }
 
-
-console.log('hello');
+// console.log('hello');

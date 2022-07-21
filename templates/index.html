@@ -11,7 +11,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-7">
-        <h1>Welcome to the Guitar Portal</h1>
+        <h1 id="hero-title">Welcome to the Guitar Portal</h1>
       </div>
     </div><a href=".intro" class="continue link-scroll"><i class="fa fa-long-arrow-down"></i> Scroll Down</a>
   </div>
@@ -29,8 +29,8 @@
         <p class="text-big"><strong></strong></p>
       </div>
       <div class="col-lg-8">
-        <p class="text-big"><strong>To create a post please register using using <a
-              href="{% url 'accounts:signup' %}">Signup</a></strong>.</p>
+        <p class="text-big"><strong>To create a post please register using <a
+              href="{% url 'accounts:signup' %}">Signup</a> page.</strong></p>
       </div>
     </div>
   </div>
@@ -55,7 +55,7 @@
 <section class="latest-posts">
   <div class="container">
     <header>
-      <h2>LATEST BLOGS</h2>
+      <h2>Latest Blogs:</h2>
     </header>
     <div class="row">
       {% for obj in latest %}
