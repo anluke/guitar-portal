@@ -26,7 +26,6 @@ def get_category_count():
 def index(request):
     featured = Post.objects.filter(featured=True)
     latest = Post.objects.order_by('-timestamp')[0:3]
-
     if request.method == "POST":
         email = request.POST["email"]
         new_signup = Signup()
@@ -126,23 +125,25 @@ def post_update(request, id):
         request.FILES or None,
         instance=post)
     author = get_author(request.user)
-    if request.method == "POST":
-        if form.is_valid():
-            form.instance.author = author
-            form.save()
-            return redirect(reverse("post-detail", kwargs={
-                'id': form.instance.id
-            }))
-    context = {
-        'title': title,
-        'form': form
-    }
-    return render(request, "post_create.html", context)
+    if post.author == request.user.author: #checks if requestor is an owner
+        if request.method == "POST":
+            if form.is_valid():
+                form.instance.author = author
+                form.save()
+                return redirect(reverse("post-detail", kwargs={
+                    'id': form.instance.id
+                }))
+        context = {
+            'title': title,
+            'form': form
+        }
+        return render(request, "post_create.html", context)
 
 
 # DELETE POST
 @login_required(login_url="/accounts/login/")
 def post_delete(request, id):
     post = get_object_or_404(Post, id=id)
-    post.delete()
-    return redirect(reverse("post-list"))
+    if post.author == request.user.author: #checks if requestor is an owner
+        post.delete()
+        return redirect(reverse("post-list"))

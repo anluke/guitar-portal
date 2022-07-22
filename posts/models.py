@@ -19,14 +19,6 @@ class PostView(models.Model):
         return self.user.username
 
 
-# post view for non-authenticated users
-class AnonPostView(models.Model):
-    post = models.ForeignKey('Post', on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.post.title
-
-
 # AUTHOR
 class Author(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -53,7 +45,6 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.user.username
-
 
 
 #POST
@@ -103,7 +94,7 @@ class Post(models.Model):
 
     @property
     def view_count(self):
-        return PostView.objects.filter(post=self).count() + AnonPostView.objects.filter(post=self).count()
+        return PostView.objects.filter(post=self).count()
 
 
 @receiver(post_save, sender=User)
