@@ -3,9 +3,12 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 from django.contrib.auth import get_user_model
 from django.urls import reverse
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 
 User = get_user_model()
+
 
 # post view for when user is authenticated
 class PostView(models.Model):
@@ -15,6 +18,7 @@ class PostView(models.Model):
     def __str__(self):
         return self.user.username
 
+
 # post view for non-authenticated users
 class AnonPostView(models.Model):
     post = models.ForeignKey('Post', on_delete=models.CASCADE)
@@ -23,7 +27,7 @@ class AnonPostView(models.Model):
         return self.post.title
 
 
-## AUTHOR ##
+# AUTHOR
 class Author(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     profile_picture = CloudinaryField('image', default='placeholder')
@@ -32,7 +36,7 @@ class Author(models.Model):
         return self.user.username
 
 
-## CATEGORY ##
+# CATEGORY
 class Category(models.Model):
     title = models.CharField(max_length=20)
 
@@ -40,7 +44,7 @@ class Category(models.Model):
         return self.title
 
 
-## COMMENT ##
+# COMMENT
 class Comment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     timestamp = models.DateTimeField(auto_now_add=True)
@@ -52,35 +56,40 @@ class Comment(models.Model):
 
 
 
-## POST ##
+#POST
 class Post(models.Model):
     title = models.CharField(max_length=100)
     overview = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)
     content = HTMLField()
-    comment_count = models.IntegerField(default = 0)
+    comment_count = models.IntegerField(default=0)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     thumbnail = CloudinaryField('image', default='placeholder')
     categories = models.ManyToManyField(Category)
     featured = models.BooleanField()
 
+
     def __str__(self):
         return self.title
+
 
     def get_absolute_url(self):
         return reverse('post-detail', kwargs={
             'id': self.id
         })
         
+
     def get_update_url(self):
         return reverse('post-update', kwargs={
             'pk': self.pk
         })
 
+
     def get_delete_url(self):
         return reverse('post-delete', kwargs={
             'pk': self.pk
         })
+
 
     @property
     def get_comments(self):
@@ -97,3 +106,8 @@ class Post(models.Model):
         return PostView.objects.filter(post=self).count() + AnonPostView.objects.filter(post=self).count()
 
 
+@receiver(post_save, sender=User)
+def create_or_update_user_author(sender, instance, created, **kwargs):
+    if created:
+        Author.objects.create(user=instance)
+        instance.author.save()

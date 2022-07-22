@@ -147,7 +147,7 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-#TINYMCE TEXT EDITOR
+# TINYMCE TEXT EDITOR
 
 TINYMCE_DEFAULT_CONFIG = {
     'cleanup_on_startup': True,

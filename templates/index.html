@@ -3,7 +3,6 @@
 
 {% block content %}
 
-
 <!-- Hero Section-->
 <section
   style="background: url({% static 'img/hero.jpg' %}); background-size: cover; background-position: center center"
@@ -16,16 +15,17 @@
     </div><a href=".intro" class="continue link-scroll"><i class="fa fa-long-arrow-down"></i> Scroll Down</a>
   </div>
 </section>
-
 <!-- Intro Section-->
 <section class="intro">
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
         <h2 class="h3">Let's have some fun!</h2>
-        <p class="text-big">This portal is for guitar lovers and covers a wide variety of guitars from different brands.
-          Please share your story with us.
-          It might be the very thing that will incite someone to start playing!</p>
+        <p class="text-big">This portal is for guitar lovers and covers a wide variety of guitars especially signature
+          series from renowned guitar players.</p>
+        <p class="text-big">If there's someone you admire or have a guitar you'd like to show please sign up and
+          make a post!</p>
+        <p class="text-big">It might be the very thing that will <strong>motivate</strong> someone to start playing!</p>
         <p class="text-big"><strong></strong></p>
       </div>
       <div class="col-lg-8">
@@ -35,7 +35,6 @@
     </div>
   </div>
 </section>
-
 <!-- Divider Section-->
 <section
   style="background: url({% static 'img/divider-bg.jpg' %}); background-size: cover; background-position: center bottom"
@@ -50,7 +49,6 @@
     </div>
   </div>
 </section>
-
 <!-- Latest Posts -->
 <section class="latest-posts">
   <div class="container">
@@ -60,8 +58,8 @@
     <div class="row">
       {% for obj in latest %}
       <div class="post col-md-4">
-        <div class="post-thumbnail"><a href="#"><img src="{{ obj.thumbnail.url }}" alt="blog-hero-image"
-              class="img-fluid"></a>
+        <div class="post-thumbnail"><a href="{{ obj.get_absolute_url }}"><img src="{{ obj.thumbnail.url }}"
+              alt="blog-hero-image" class="img-fluid"></a>
         </div>
         <div class="post-details">
           <div class="post-meta d-flex justify-content-between">
@@ -81,7 +79,6 @@
     </div>
   </div>
 </section>
-
 <!-- Newsletter Section-->
 <section class="newsletter no-padding-top">
   <div class="container">
@@ -98,7 +95,7 @@
             {% csrf_token %}
             <div class="form-group">
               <input type="email" name="email" id="email" placeholder="Type your email address">
-              <button type="submit" class="submit">Subscribe</button>
+              <button type="submit" class="submit" id="btn">Subscribe</button>
             </div>
           </form>
         </div>
@@ -106,7 +103,6 @@
     </div>
   </div>
 </section>
-
 <!-- Gallery Section-->
 <section class="gallery no-padding">
   <div class="row">

@@ -1,11 +1,7 @@
-/* your styles go here */
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
 
-
 /* GENERAL */
-
 html,
 body {
     height: 100%;
@@ -36,16 +32,12 @@ s footer {
     -webkit-text-stroke: 1px;
 }
 
-
 /* NAV */
-
 .nav-link:hover {
     transform: scale(1.1);
-    color: #ffa69e;
 }
 
-
-/* CREATE FORM */
+/* FORM CREATE */
 .create {
     max-width: 1000px;
     margin: 25px auto;
@@ -58,5 +50,4 @@ s footer {
 .create-btn:hover {
     color: #ffa69e;
     background-color: black;
-
 }

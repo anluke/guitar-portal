@@ -2,7 +2,6 @@ from django.db.models import Count
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib.auth.decorators import login_required
-
 from .forms import CommentForm, PostForm
 from .models import Post, Author, PostView
 from marketing.models import Signup
@@ -61,7 +60,6 @@ def blog(request):
         'most_recent': most_recent,
         'page_request_var': page_request_var,
         'category_count': category_count,
-
     }
     return render(request, 'blog.html', context)
 

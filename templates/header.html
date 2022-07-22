@@ -19,7 +19,7 @@
                     <li class="nav-item">
                         <form class="logout-link" action="{% url 'accounts:logout' %}" method="POST">
                             {% csrf_token %}
-                            <button class="btn btn-primary" type="submit">Logout</button>
+                            <button class="btn btn-primary" id="logout" type="submit">Logout</button>
                         </form>
                     </li>
                     {% else %}
@@ -40,7 +40,6 @@
                     <li class="nav-item nav-link"><a href="{% url 'post-create' %}" class="nav-link">Create</a>
                     </li>
                     <!-- {% endif %} -->
-
                 </ul>
             </div>
         </div>

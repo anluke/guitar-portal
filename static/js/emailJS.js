@@ -1,17 +1,13 @@
 function sendMail(contactForm) {
     emailjs.send('gmail', 'guitar', {
-            from_name: "Guitar Portal",
-            to_email: "contactForm.emailaddress.value"
-        }, 'N6_BpHp-n6GFioyxa')
+            'to_email': contactForm.email.value,
+        })
         .then(
             function (response) {
-                console.log('SUCCESS', reponse);
+                console.log('SUCCESS', response);
             },
             function (error) {
                 console.log('FAILED', error);
             }
         );
-    return false;
 }
-
-// console.log('hello');
