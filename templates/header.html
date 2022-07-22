@@ -16,10 +16,12 @@
             <div id="navbarcollapse" class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
                     {% if user.is_authenticated %}
+                    <p class="nav-item mt-2 mr-4">Logged in as: <span
+                            class="text-info"><strong>{{ request.user }}</strong></p>
                     <li class="nav-item">
                         <form class="logout-link" action="{% url 'accounts:logout' %}" method="POST">
                             {% csrf_token %}
-                            <button class="btn btn-primary" id="logout" type="submit">Logout</button>
+                            <button class="btn btn-primary bg-dark text-white" id="logout" type="submit">Logout</button>
                         </form>
                     </li>
                     {% else %}
@@ -36,12 +38,14 @@
                     </li>
                     <li class="nav-item nav-link"><a href="/about" class="nav-link">About</a>
                     </li>
-                    <!-- {% if request.user.is_authenticated %} -->
                     <li class="nav-item nav-link"><a href="{% url 'post-create' %}" class="nav-link">Create</a>
                     </li>
-                    <!-- {% endif %} -->
                 </ul>
             </div>
         </div>
     </nav>
+
+
+
+
 </header>
