@@ -51,3 +51,12 @@ s footer {
     color: #ffa69e;
     background-color: black;
 }
+
+/* IFRAMES */
+/* Auto adjust when uploaded trough tinymce */
+iframe {
+    height: 300px;
+    width: 300px;
+    resize: both;
+    overflow: auto;
+}
