@@ -1,111 +1,182 @@
-![Battleship Banner](https://github.com/anluke/battleship-game/blob/main/assets/images/readme_snips/battleship_banner.png?raw=true)
+![Battleship Banner](https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/title.png?raw=true)
 
-# WELCOME TO GUITAR PORTAL
+# WELCOME TO GUITAR PORTAL  
+
+
+[View the live project here.](https://guitar-portal.herokuapp.com/)
 
 
 This project was built for Code Institute's Portfolio 4 Assessment.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+This project is a fictitious portal for famous guitar players and their signature guitars.  
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
 
-## Gitpod Reminders
+![Mockup](https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/mockup/mockup.png?raw=true)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+* [Introduction](#introduction)
 
-A blue button should appear to click: _Make Public_,
+* [UX](#ux) 
+    - User Stories
+        -  First Time Visitor Goals
+        -  Site Administrator Goals  
+* [Layout](#layout)
 
-Another blue button should appear to click: _Open Browser_.
+    - Design
+        - Colour scheme
+        - Typography
+        - Images
+    - Wireframes
+        - Discrepancy with Original Ideas
+        - Links to Wireframes
+* [Features](#features)
+    - Responsivity
+    - Interactive Elements
+    - Features to add in future
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* [Technologies Used](#technologies-used) 
+    - Languages Used
+    - Frameworks, Libraries and Programs Used  
 
-A blue button should appear to click: _Make Public_,
+* [Testing](#testing)
+    - Testing User Stories from User Experience (UX) Section
+    - Further Testing
+    - Unresolved Bugs 
 
-Another blue button should appear to click: _Open Browser_.
+* [Deployment](#deployment)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* [Credits](#credits)
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+# Introduction
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+Guitar Portal is a fan based page. The name is just 'portal' but it is actually a blog. The intro already tells you that this is a site that will cover guitar instruments.  
+It enables user to view the posts but not comment until they are registered. It also does not allow users to create posts or delete them.
+And it also does not allow users to delete or update posts they did not create.
 
-------
 
-## Release History
+# UX
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+-   ### User stories 
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+    -   #### Site User
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+        1. As a Site User I'd like to register for an account and login afterward.
+        2. As a Site User I'd like to View the list of created posts.
+        3. As a Site User I'd like to Open a post and view it's contents.
+        4. As a Site User I'd like to sign up for newsletter be that registered or guest without registering.
+        5. As a Site User I'd like to View Latest Posts made by all site users.
+        6. As a Site User I'd like to View Comments and Views on Blog posts.
+        7. As a Site User I'd like to View my Login status at Navbar.
+        
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+    -   #### Site Administrator Goals
+        1. As a Site Administrator I would like to be able to create, view, edit and delete bookings.    
+        
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+# Layout
+-   ### Design
+    -   #### Colour Scheme
+        -   The main colours in the website theme for header, background, footer and text labels are white, light gray, blue and black.
+    -   #### Imagery
+        -   Imagery was chosen to go with the vivid pictures capturing the moment or just a good angle with the guitar, adding more meaning to the blog post. Photos chosen were 'Portrait' formats.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+*   ### Wireframes
+    -   #### Discrepancy with original ideas
+        -   I had an idea of building a blog or expanding on the blog created by Matt during 'I Think Therefore I Blog' lesson. However I didn't feel like it was something I'd like to do, expand on already finished project. So I went with a Django project advised to me by my Mentor. I followed an idea from the Boostrapious template but adjusted it to my liking. Template looks great and it comes with pleny of configuration that may not be necessary. However I was reluctant to start playing around with other files as I did not want to break the functionality of the site.
+    -   #### Links to Wireframes
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+        <details><summary>Desktop Wireframes</summary>
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/wireframes/desktop_home.png?raw=true">
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/wireframes/blog_desktop.png?raw=true">
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/wireframes/about_desktop.png?raw=true">
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/wireframes/desktop_signup.png?raw=true">
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/wireframes/desktop_login.png?raw=true">
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/wireframes/create_desktop.png?raw=true">
+        </details>
+        <details><summary>Tablet Wireframes</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/wireframes/tablet_home.png?raw=true">
+        </details>
+        <details><summary>Phone Wireframes</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/wireframes/phone_layout.png?raw=true">
+        </details>
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+# Features
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+-   ### Responsivity
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+The application is responsive on all device sizes, thanks to the [Bootstrapious](https://bootstrapious.com/) (bootstrap4)
+ theme. In mobile view there is a collapsible menu icon. All images, text labels, forms get appropriately resized.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+-   ### Interactive elements
+    -   #### Nav links for Home, Menu, Blog, About, My bookings, Signup, Login and Logout link.
+    -   #### Form input fields on signup, logout, update and delete posts.
+    -   #### Buttons - including form buttons (signup, login, logout, table booking, edit and delete posts buttons and page navigation buttons (when there is too many blog posts)
 
-------
+-   ### Features to add in future   
+    -   #### I would like to add a dropdown list for registered users to acess their account-related activites like view bookings, login and logout.
 
-## FAQ about the uptime script
 
-**Why have you added this script?**
+# Technologies Used
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+### Languages Used
 
-**How will this affect me?**
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Frameworks, Libraries & Programs Used
+1. [Django:](https://www.djangoproject.com/)
+    - The Python-based Django framework was used to set up the structure, functionalities,  data model and database of the website.
+1. [Bootstrapious Template:](https://bootstrapious.com/)
+    - Derived from Bootstrap 4. Bootstrap was used to assist with the responsiveness and styling of the website.
+1. [Google Fonts:](https://fonts.google.com/)
+    -    Used for Roboto Font.
+1. [Font Awesome:](https://fontawesome.com/)
+    - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
+1. [jQuery:](https://jquery.com/)
+    - Originally used by my template. I am putting it on the list as it can be found within my files but I have not personally used it for this project.
+1. [Javascript:](https://en.wikipedia.org/wiki/JavaScript)  
+    - Used for loading Bootstrapious CSS Templates and to create Email JS and connect it to our 'Newsletter' button.
+1. [Git:](https://git-scm.com/)
+    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+1. [GitHub:](https://github.com/)
+    - GitHub is used to store the projects code after being pushed from Git.
+1. [Balsamiq:](https://balsamiq.com/)
+    - Balsamiq was used to create the wireframes during the design process.
+1. [Lucidchart:](https://www.lucidchart.com/) was used to create the data model of the project .
+    <details><summary>Data Model</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/data-model/data-model.png?raw=true">
+    </details>   
+1. [PostgreSQL:](https://www.postgresql.org/)
+    - Used PostgreSQL as per instructions of CI lessons in PP4.
+1. [Cloudinary:](https://cloudinary.com/)
+    - I used cloudinary for cloud-based storage and partly for linking of my website images.
+1. [Heroku:](https://www.heroku.com/)
+    -  Heroku is used for the deployment and ultimate cloud-based storage of my application.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+# Testing
 
-**So….?**
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every pagefor HTML and CSS of the project. The issue is that this project is using a template and if loaded directly via link from Heroku or via GitPod link it will throw many errors as can be seen below:
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+-   [W3C URI Validator](https://validator.w3.org/#validate_by_uri)    
+    <details><summary>HTML Summary - Direct Link</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/TESTING-IMG/HTML-TEST-IMG/html.png?raw=true">
+    </details>  
 
-**Can I opt out?**
+    But if you use the HTML files directly from the project without Python template tags there are no Major problems. The issue here is with the template as it has too many files that are intertwined and removing them broke my code so many times that I had no other choice but to leave it. I don't like submitting a test like this but I have spent hours on this. I tried testing some stuff with Tutor help and they told me that it could also be Django's issue with the template..
+    <details><summary>HTML Summary - Direct Link</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/TESTING-IMG/HTML-TEST-IMG/html.png?raw=true">
+    </details>  
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+-   [W3C URI Validator](https://validator.w3.org/#validate_by_uri)
+    - See the [URI Validator Results](https://github.com/renatalantos/booking-system/tree/main/restaurant/documents/screenshots/html%20validation)
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+    - See the [CSS Validator Results](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/css%20validation/Jigsaw%20CSS%20Validator.JPG)
+-   [Gitpod Pylint](https://pylint.org/)
+    - See the [Gitpod Pylint Results](https://github.com/renatalantos/booking-system/tree/main/restaurant/documents/screenshots/pylint%20validation)    

@@ -1,649 +1,260 @@
-# Favoureats - Tried and Tested Recipes
-
-![Mockups](documentation/screenshots/mockups.png)
-
-The live website can be seen [here](https://favoureats.herokuapp.com/)
-
-## UX
-### Strategy
-#### Agile
-The Agile methodology was used to plan the project. Github was used as the tool to demonstrate this.
-1. Projects were used to divide the project into three iterations with a simple Kanban board.
-2. Milestones were used to create Epics with a custom template
-3. Issues were used to create User Stories with a custom template. Eash user story is clearly described with a title, statement, acceptance criteria and tasks
-
-Each user story was linked to an Epic and placed within one of three Iterations. The user stories were labelled 'must do' 'could do' and 'should do' in order to prioritise the work. As work on a user story was begun the story was moved from the 'to do' column of the board to the 'In progress' column. When work on the story was complete the user story was moved into the 'done' column.
-
-However it was difficult in Github to adequately link Iterations - Epics - User Stories. Although I linked User Stories (Issues) to Epics (Milestones) and placed these in Iterations (Milestones), Epics did not automatically show the % progress to completion once user stories were moved in the kanban board. It was also difficult given the tight time frame and developer's level of knowledge to accurately plan out the content of each user story in advance. As a result some user stories were updated during the course of implementation. 
-
-#### Project Goal
-The goal of the project is to create a recipe website with tried and tested recipes for both family meals and dinner parties. Inspiration for the site came from the developer's book club group who requested a place to store the recipes for the lovely dinners provided at their regular meetings. The developer's family also wanted a means to access family favourite recipes so the project was expanded to appeal more broadly to general users looking for good recipes and a means to store, edit and delete their own favourite recipes.
-The target user is someone:
-* who wants to find recipes to use to cook for the family or friends
-* who wants to store their own favourite recipes in one place
-* who wants to share their favourite recipes
-
-#### Epics and User Stories
-There are 10 Epics and 20 User Stories. The User Stories are numbered so can be easily tracked. However during the planning stage as the stories were being amended their id numbers[#) are no longer in sequence.
-1. Epic: Set up admin page for admin to manage recipe posts, reviews and site users
-* User Stories:
-  * As a site admin I can CRUD draft recipe posts so that I can complete the recipes later (must-have / complete)[#8](https://github.com/siobhanlgorman/favoureats/issues/8)
-  * As a site admin I can CRUD recipes so that I can manage my site content (must-have / complete)[#9](https://github.com/siobhanlgorman/favoureats/issues/9)
-  * As a site admin I can approve reviews so that I can filter out inappropriate content (must-have / complete)[#10](https://github.com/siobhanlgorman/favoureats/issues/10)
-  * As a site admin I can view the number of favourites on a recipe post so that I can know which are the most popular[#28](https://github.com/siobhanlgorman/favoureats/issues/28)
-  * As a site admin I can view reviews of a recipe post so that I can read the commentary on a recipe[#29](https://github.com/siobhanlgorman/favoureats/issues/29)
-  * As a site admin I can create reviews of recipe posts so that I can generate discussion on recipe posts[#31](https://github.com/siobhanlgorman/favoureats/issues/31)
+# Welcome to **[Fungi News](https://funginews.herokuapp.com/)**
 
-2. Epic: Enable users to set up an account on the website to access the full features
-* User Stories:
-  * As a user I can register an account so that I can access the full range of features on the site (must-have / complete)[#18](https://github.com/siobhanlgorman/favoureats/issues/18)
-  * As a registered user I can login and logout of the site so that I can access my content (must-have / complete)[#19](https://github.com/siobhanlgorman/favoureats/issues/19)
-3. Epic: Create landing page to attract users to the site
-* User Stories:
-  * As a user I can view a snapshot of the site on the landing page so that know what the site's purpose is (must-have/complete)[#24](https://github.com/siobhanlgorman/favoureats/issues/24)
-4. Epic: Enable registered users to CRUD their own recipes
-* User Stories:
-  * As a registered user I can CRUD my own recipes so that I can manage my own content (should-have / complete)[#12](https://github.com/siobhanlgorman/favoureats/issues/12)
-5. Epic: Create recipe list page to showcase content to users
-* User Stories:
-  * As a user I can view a list of recipes so that I can see what I would like to select if registered (must-have / complete)[#15](https://github.com/siobhanlgorman/favoureats/issues/15)
-  * As a user I can view a paginated list of recipes so that I can easily move through the list of recipes (could-have / future feature)[#33](https://github.com/siobhanlgorman/favoureats/issues/33)
-6. Epic: Enable registered users to search through the recipes to enhance UX
-* User Stories:
-  * As a user I can search my own recipe posts by title and ingredient so that easily find a recipe (should-have / complete)[#23](https://github.com/siobhanlgorman/favoureats/issues/23)
-  * As a user I can search through the recipe list page by title and ingredient so that I can easily find a recipe (should-have / complete) [#25](https://github.com/siobhanlgorman/favoureats/issues/25)
-7. Epic: Enable registered users to interact with recipe posts to enhance UX
-* User Stories:
-  * As a registered user I can click on a post in the recipe list so that I open the full recipe post (must-have / complete)[#20](https://github.com/siobhanlgorman/favoureats/issues/20)
-  * As a registered user I can favorite/unfavorite recipes so that I can interact with the site content (must-have / complete)[#11](https://github.com/siobhanlgorman/favoureats/issues/11)
-  * As a logged-in user I can review a recipe so that I can interact with the site (must-have / complete)[#32](https://github.com/siobhanlgorman/favoureats/issues/32)
-8. Epic: Enable users to filter recipe posts to enhance UX
-* User Stories:
-  * As a user I can filter all recipes by ingredient/favourite so that I can easily sort the recipes (could-have / future feature)[#22](https://github.com/siobhanlgorman/favoureats/issues/22)
-9. Epic: Enable users to sign-in/register with Google/Facebook account
-* User Stories:
-  * As a user I can register an account with social networks so that I can streamline my accounts (could-have / future feature)[#30](https://github.com/siobhanlgorman/favoureats/issues/30)
-10. Epic: Enable users to CRUD own reviews
-* User Stories:
-  * As a registered user I can create/read/update/delete my own review posts so that I can manage my own content (could-have / complete)[#17](https://github.com/siobhanlgorman/favoureats/issues/17)
+<img src="https://res.cloudinary.com/mayathebee/image/upload/v1657461423/static/images/mockup_tvfbue.jpg" width="800">
 
-### Scope
+Curious to see what I have built? [Here](https://funginews.herokuapp.com/) is deployed link.
 
-The scope of the project was large at the planning stage. While the ultimate goal was to allow logged in users to have full CRUD functionality for all their own content, time constraints meant this was limited to CRUD functionality for users only for their own recipes as this was deemed a must-have. More functionality for logged in users will be added in the future. In addition further front-end admin functionality will be added in the future but for this project full management is limited to backend Django admin panel and front-end CRUD of the recipes created by the admin as a logged in user.
+## **Purpose of the site**
+<p>This site is a blog style news site, aimed to let users keep up with the fast changing digital world within the NFT realm.</p>
 
-### Structure
-The website consists of six pages: Home, About, Recipes, My Recipes, Register and Sign In/Sign Out pages. Home, About and Recipes can be viewed by all users. My Recipes is limited to logged in users. 
+ Site owner’s main objectives are:
+- to inform users about what’s happening in NFT world
+- to educate users about what is NFT, what can you do with it
+- to increase users’  interests and curiosity about NFT and blockchain technology in general
+- to provide a platform for users to share posts, comments and interact with each other
+- to create a community with people that has common interests in this technology
 
-### Existing Features
-#### All Pages
+Site user’s main objectives are:
+- to keep up with the NFT trendy news
+- to meet other like minded people
+- to interact and discuss with other people on this topic
+- to learn from each other about this technology
+- to share posts, ideas, opinions with people who understand you
+- to show your passion to other people who don’t know a lot about it and want to learn
 
-* Navbar: 
-- Logo linking back to the home page:
+------
 
-![Logo](documentation/screenshots/logo_screenshot.png)
-*Logo*
+## **Why This**
 
-- Links to Home, About, Recipes, My Recipes, Register and Sign In/Out pages: 
-  The Home, About and Recipes page links are visible to and can be accessed by any user. If the user is not signed in the Sign in and Register links are visible in the navbar. If the user is signed in the Sign In and Register links are replaced by a Sign Out link and the My Recipes page link is visible:
+<p>NFT is fairly new technology, the very first NFT was created back in 2014, then minted on the blockchain, it was sold for $4. Fast forward 8 years later today, NFT art is sold at millions of dollars, there are more and more people showing interest in this new technology. Big tech companies are building virtual universes even, who knows what else can be built with this.</p>
 
-![](documentation/screenshots/nav1.png)
-*Navigation for not signed in user*
+<p>I decided to build this project, because I personally believe this is our future, and I would like more people to be aware of this, get interested and try to understand it. For those who have the same interests as me, I hope this site can be a place to share and exchange information, knowledge and opinions about NFT and blockchain in general, so we get to know it better together.</p>
 
-![](documentation/screenshots/nav2.png)
-  *Navigation for signed in user*
+------
 
-- The active page is highlighted for good UX:
+## **Project planning**
+<br>
 
-![](documentation/screenshots/nav3.png)
-*My Recipes page highlighted*
+### **User Stories**
+The tasks users can perform depends on their role. On this site, there are admin, first time user and returned users, tasks that they have the authorization to perform are shown in below table, as well as their associated User Stories from [Github](https://github.com/Maya-Claveau/pp4-fungi-news/projects/1).
 
-- The navbar sticks to the top of the page so remains in view for the user to easily navigate around the site
 
-![](documentation/screenshots/sticky_nav.png)
-*Sticky navbar*
+<img src="https://res.cloudinary.com/mayathebee/image/upload/v1657478028/static/images/user_stories_with_tasks_xmsacw.jpg" width="800">
 
-- The navbar collapses for mobile and portrait tablets:
+#### **Logic**
+I decided that any new post added by the user need approval, reasons being:
+- I have no one to moderate the post, that is the reason any posts coming from user needs to be approved by admin first
+- To prevent spam, and/or post that is unrelated to nft
+- To make sure the language is appropriate
+- To reach the max storage in database in short time period filled with trash data
+- A bot can post massive amount of trash post which will cause the website been taken down
+- Last but not least, because of this nature, in the admin panel under post, the drop down menu only has the delete option, without “approval selected posts”, because naturally you would have to go through the content before approving the post.
 
-![](documentation/screenshots/nav_coll.png)
-*Navbar collapsed*
+<br>
 
-* Footer: with clearly visible links to direct the user to the Facebook, Instagram and Twitter pages
+### **Database Structure**
 
-![](documentation/screenshots/footer.png)
-*Footer*
+Below is the Database structure that this project is based on. There are User, Post and Comment tables, you can also see their relationships between each table.
 
-#### Home Page
-* Hero Image with overlay text highlighting the purpose of the site
+<img src="https://res.cloudinary.com/mayathebee/image/upload/v1657479550/static/images/database_structure_au8tqz.jpg" width="800">
 
-![](documentation/screenshots/hero_image.png)
-*Hero Image*
+<br>
 
-* Call to action register button on hero image is visible to users who are not logged in to encourage registration to access the features highlighted on this page. The button becomes invisible if the user is signed in. 
+### **WireFrames**
 
-![](documentation/screenshots/navbar_no_log.png)
-*View to not signed in user*
+<details><summary>Desktop Wireframes</summary>
+<img src="https://res.cloudinary.com/mayathebee/image/upload/v1657480163/static/images/funginews%20img/desktop-home-page_p8qztm.jpg" width="800">
+<img src="https://res.cloudinary.com/mayathebee/image/upload/v1657480163/static/images/funginews%20img/desktop-home-page-pt2_cwdbgn.jpg" width="800">
+<img src="https://res.cloudinary.com/mayathebee/image/upload/v1657480163/static/images/funginews%20img/desktop-signup-form_b0mpnc.jpg" width="800">
+<img src="https://res.cloudinary.com/mayathebee/image/upload/v1657480163/static/images/funginews%20img/desktop-login-form_tn1jr5.jpg" width="800">
+<img src="https://res.cloudinary.com/mayathebee/image/upload/v1657480163/static/images/funginews%20img/desktop-home-page-footer_hg331a.jpg" width="800">
+</details>
 
-![](documentation/screenshots/navbar_log.png)
-*View to signed in user*
+<details><summary>Mobile Wireframes</summary>
+<img src="https://res.cloudinary.com/mayathebee/image/upload/v1657480164/static/images/funginews%20img/mob-home-page_pt5hkv.jpg" width="400">
+<img src="https://res.cloudinary.com/mayathebee/image/upload/v1657480164/static/images/funginews%20img/mob-hope-page-menu_c55ruj.jpg" width="400">
+<img src="https://res.cloudinary.com/mayathebee/image/upload/v1657480164/static/images/funginews%20img/mob-signup_wnjuix.jpg" width="400">
+<img src="https://res.cloudinary.com/mayathebee/image/upload/v1657480163/static/images/funginews%20img/mob-signup-form_qbp5en.jpg" width="400">
+<img src="https://res.cloudinary.com/mayathebee/image/upload/v1657480164/static/images/funginews%20img/mob-login_dpi4ak.jpg" width="400">
+<img src="https://res.cloudinary.com/mayathebee/image/upload/v1657480164/static/images/funginews%20img/mob-home-page-footer_gmwbcv.jpg" width="400">
+</details>
 
-* Text with links directing users to the features available to logged in users
+<br>
 
-![](documentation/screenshots/latest.png)
-*Latest recipe information*
+### **Font and color**
 
-* Snapshot images of three most recent recipe posts with title, date added and author. This page updates automatically as new recipes are added which keeps the site fresh and interesting to users.
+#### **Font**
+I chose Inter because it looked nice and clean, Most importantly, it is easy to read. <details><summary>See here</summary>
+<img src="https://res.cloudinary.com/mayathebee/image/upload/v1657481182/static/images/funginews%20img/font_vhodoz.jpg"></details>
 
-![](documentation/screenshots/snapshot.png)
-*Three latest recipes*
+#### **Color**
+I chose this colour palette, because it looks simple and classy.
+<details><summary>Color palette</summary>
+<img src="https://res.cloudinary.com/mayathebee/image/upload/v1657481510/static/images/funginews%20img/color_palettes_2_nbg3jf.jpg"></details>
 
-* Call to action button to 'View the Recipes' at bottom of page to direct users easily onto view the full recipe list page
+------
 
-![](documentation/screenshots/view_btn.png)
-*View the Recipes button*
+## **Installations**
 
-#### About Page
-* Image with background text information about the website
+Below are the installations we need before writing any code
+<br>
 
-![](documentation/screenshots/about_pg.png)
-*About Page*
+Install the server to use when deploy on Heroku
+  ```sh
+  pip3 install django gunicorn
+  ```
 
-* Call to action button 'View the Recipes' to direct users onwards to the main recipes page
+Supporting libraries:
+  * Postgresql and psycopg2
+  ```sh
+  pip3 install dj_database_url psycopg2
+  ```
+  * to run Cloudinary
+  ```sh
+  pip3 install dj3-cloudinary-storage
+  ```
+  Creat file list:
+  * create requirement.txt
+  ```sh
+  pip3 freeze --local > requirements.txt
+  ```
+  * create new django project
+  ```sh
+  django-admin startproject funginews .
+  ```
+  * create blog app
+  ```sh
+  python3 manage.py startapp blog
+  ```
 
-![](documentation/screenshots/about_btn.png)
-*View the Recipes button on About Page*
+## **23 Days Later**
 
-#### Recipes Page
-  * Images with summary description of all the recipes are visible on the page. Recipe title is a link to the full recipe detail page for logged in users. Stars representing favourites and comment icons representing reviews have total number beside them:
+After 23 days of tears and sweat, I can finally present a functional blog site.
 
-![](documentation/screenshots/recipes_page.png)
-*Recipes Page*
+By clicking [Fungi News](https://funginews.herokuapp.com/) first thing you will see is the landing page. Here you can see the navbar on the top which has links for Contact us, Blog, Signup or Login.
 
-* A search bar above the list of recipes to enable users to easily locate a particular recipe by a keyword from the title or ingredients fields. Clickable icons to search and an 'x' to clear search back to full list of recipes:
+If you scroll down you will see the articles section with the latest posts, along with info like title, author, a short snippet of the post, date and time when the post was created as well as a number of likes on that particular post.
 
-![](documentation/screenshots/search.png)
-*Search bar*
+If you are logged in, you will see two buttons, add post and my post, this will take you to the respective page. If you are not logged in you will just see the footer with social links icons of Twitter, Telegram, Reddit, Instagram, and Facebook. At the very bottom of the page is my Github repo link where you can see all the code and this file to read through how I created this project.
 
-* The recipe titles link to the full recipe detail page which can only be accessed by logged in users. Users who are not logged in are redirected to the sign-in page:
+Desktop
+<details><summary>Not logged in user</summary>
+<img src="https://res.cloudinary.com/mayathebee/image/upload/v1657529651/static/images/funginews%20img/first_time_user_exiqpj.gif">
+</details>
 
-![](documentation/screenshots/recipe_snap.png)
-*Sample recipe*
+<details><summary>Logged in user</summary>
+<img src="https://res.cloudinary.com/mayathebee/image/upload/v1657529153/static/images/funginews%20img/logged_in_plhf3g.gif">
+</details>
 
-* A back to top arrow on bottom right which remains on screen once user has started scrolling to impove UX by making it easy for the user to return to the top of the page to search or navigate to a different page:
+<br>
 
-![](documentation/screenshots/scroll.png)
-*Back to top arrow*
+Mobile
+<details><summary>Not logged in user
+</summary>
+<img src="https://res.cloudinary.com/mayathebee/image/upload/v1657530701/static/images/funginews%20img/new_user-mob_sttoph.gif">
+</details>
 
-  * A call to action 'Add a Recipe' button which will direct logged in users to my recipes page and non-logged in users to the sign in page. This allows users to intuitively navigate their journey on the website:
+<details><summary>Logged in User
+</summary>
+<img src="https://res.cloudinary.com/mayathebee/image/upload/v1657530701/static/images/funginews%20img/logged_in_mobile_wvp8ii.gif">
+</details>
 
-![](documentation/screenshots/add_btn.png)
-*Add a Recipe Button*
+The project evolved by itself during the development stage, and I am made changes since the wireframes were done, and added features that I didn’t think about initially. Overall, I am quite happy about how it turned out.
 
+------
 
-#### My Recipes Page
-This page can only be accessed by a logged in user. The navigation link only appears when a user is logged in. The page displays a table list of recipes which have been added by the logged in user.
+## **Testing**
 
-* A search bar above the list of recipes to enable users to easily locate a particular recipe by a keywork from the title or ingredients fields. Clickable icons to search and an 'x' to clear search back to full list of recipes:
+Testing was conducted continuously throughout the development of this project. Google dev tools were used mainly, to ensure things run smoothly and as expected. More details, please refer to [TESTING.md](TESTING.md) file.
 
-![](documentation/screenshots/search2.png)
-*Search bar*
+### **Code Validation**
+Details on code validation can also be found in the [TESTING.md](TESTING.md) file.
 
-* A call to action button is clearly visible to the user to 'Add a Recipe'. When a user clicks on this button the recipe form opens where the user can enter all the fields of the recipe:
+## **Tech Stack**
+### **Language**
 
-![](documentation/screenshots/add_btn.png)
-*Add a Recipe Button*
+This project is a Full-Stack site based on business logic used to control a centrally-owned dataset. With the authentication it provide role-based access to the data.
 
-![](documentation/screenshots/recipe_add.png)
-*Add a Recipe Form*
+Main programming languages used are:
 
-* The list of recipes created by the logged in user is organised in a table in reverse order of creation and by title with three link options available for the user to view, edit and delete their own recipes:
+- **python**
+- **Django**
+- **HTML**
+- **CSS**
+- **Javascript**
+- **postgresql**
+- **psycopg2**
 
-![](documentation/screenshots/recipe_tbl.png)
-*Recipes table*
+### **Tools**
+- [Github](https://github.com/) for store and version control of the code
 
-- View: user can click to open the full recipe detail page
-- Edit: user can click to open the completed recipe form and edit the details to resubmit with changes
+- [Gitpod](https://gitpod.io/workspaces) for editing code
 
-![](documentation/screenshots/recipe_edit.png)
-*Recipe Edit Form*
+- [Heroku](https://heroku.com/) for deployment
 
-* a message is displayed to show successful update of recipe
+- [Lucidchart](https://www.lucidchart.com/pages/) for creating database relationship
 
-![](documentation/screenshots/edit_recipe_msg.png)
-*Successful update message*
+- [Cloudinary](https://cloudinary.com) for store the images and css files used in this project
 
-- Delete: the user can delete a recipe. A warning is displayed to allow for change of mind before deletion and a button with option to return to My Recipes page:
+- [Lightshot](https://app.prntscr.com/en/index.html) for creating screenshots
 
-![](documentation/screenshots/recipe_delete.png)
-*Delete recipe confirmation*
+- [GitHub Wiki TOC generator](https://ecotrust-canada.github.io/markdown-toc/) for generating table of content for README.md file
 
-![](documentation/screenshots/delete_msg.png)
-*Successful delete message*
+- [techsini.com](https://techsini.com/multi-mockup/index.php) for generating the mock up
 
-#### Recipe Detail Page
+- [Freepik](https://www.freepik.com/) for downloading the nft images
 
-Accessed only by logged in users by clicking the 'view' tab on the My Recipes table or the title of a recipe in the Recipes page.
+- [Figma](https://www.figma.com/) for making the logo
 
-![](documentation/screenshots/full_recipe.png)
+- [Bootstrap](https://getbootstrap.com/) was used to speed up the design the style and responsiveness of the website
 
-* The star icon which can be clicked to favourite/unfavourite a recipe features prominently:
-* The number of favourite stars given to the recipe is underneath the star and updates when the user clicks the star
-* Messages are displayed to confirm user's actions:
 
-![](documentation/screenshots/star_fv.png)
-*Star icon when user has favourited the recipe with success message*
+### **Difficulties I manage to overcome**
+Below are example of list of things I struggled with, there are many more that were not documented.
+- Alert Message doesn’t appear when signup or login
+- Like button icon doesn’t appear (font awesome problem)
+- Login btn doesn’t work on Login page
+- Deployed version: add post button not showing (turns out i wan’t logged in)
+- Sticky footer issue
+- Display author name when a new post is added: solution add “author” in admin.py file on the list_display field
+-  Update and delete wasn’t working: post.slug, and sccess_url = ‘/’
+- Display all posts shared by one user: logic – query from the db to specific use.id, ie: select all from posts table in db, then user id
+- ContactForm: Contact Form is not working. IntegrityError at /contact/
+IntegrityError at /contact NOT NULL constraint failed
+- Display message on success submit contact form: https://stackoverflow.com/questions/42848646/show-django-messages-inside-form-invalid-of-formview
+- Display a message and share post button when logged in user havn’t share anything yet
+- Excerpt issue: remove the summernotewidget solved it
 
-![](documentation/screenshots/star_un_fv.png)
-*Star Icon when user has not favourited with message and total updated*
+## **Credits**
 
-* the about section of the recipe includes the 'updated on' field which will display the date of any changes made to the recipe details:
+- Code Institute's [I think therefor I blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/)
 
-![](documentation/screenshots/update.png)
-*Date last updated*
+- Tutor support from Code Institute for helping me out when I got stuck. Special shout out to Ger, who helped me to solve multiple problems that was driving me nuts.
 
-* Reviews: 
-- At the bottom of the page is the Review section to display published reviews in descending order by date:
+- Fellow students on slack also helped me a lot, is such a amazing community to learn and grow together
 
-![](documentation/screenshots/reviews.png)
-*Reviews*
+- [Stackoverflow](https://stackoverflow.com/) for researching massive amount of things
 
-- below the published reviews is a form to submit a recipe review. 
-- After submission a success message displays and in the review box a note 'Your review is pending approval' is shown until the admin approves the review for publication:
+- Youtube videos for watching people building things with the features I needed, especially the google login part
 
-![](documentation/screenshots/review.png)
-*Review form*
+- Google in general, I can't remember the list of things and webiste I searched
 
-![](documentation/screenshots/review_pend.png)
-*Pending approval below published reviews*
+<br>
 
-![](documentation/screenshots/review_msg.png)
-*Review thanks message*
+## **Acknowledgments**
+My mentor Mr. ADEGBENGA ADEYE for his continuous structured feedback and support. My project won't be the same without his valuable advice.
 
-#### Sign-In Form
-* User signs in by entering username and password
-* Choice of two action buttons: Sign In or Home which redirects to the home page
+Tutor support at Code Institute. They are always there when I need help, I am really grateful for that.
 
-![](documentation/screenshots/sign_in_form.png)
-*Sign In Form*
+Fellow students on the Slack community for their help and support, this amazing community constantly inspires me and it feels nice to learn and grow with them together.
 
-* A success message informs user of their action
+Most importantly, I would like to thank my husband, my friends Elina and David, who supported me every step in my coding journey, and my son who was a brave boy even when he was sick and I couldn't give him much attention as I should during the last two days of the development of this project.
 
-![](documentation/screenshots/sign_in_msg.png)
-*Sign in success message*
 
-#### Register Page
+THANK YOU ALL!!!
 
-* Users can register for an account by entering a username, an optional email and a password
-* Choice of two action buttons: Sign Up or Home which redirects to the home page
 
-![](documentation/screenshots/register_form.png)
-*Register form*
 
-* A success message informs users of their action
+Disclaimer: I am aware of this readme is not up to standard, there are tons of things I would like to talk about, and have the notes and screenshots. Unfortunately, I m running out of time and had to do it this way. It is also possible that I missed some credit to the source of my code. Please accept my apology.
 
-![](documentation/screenshots/reg_msg.png)
-*Successful registration message*
 
-#### Sign-Out Page
-
-* Sign Out page with two buttons: sign out or redirect to the Home page. User is redirected to home page after signing out:
-
-![](documentation/screenshots/sign_out_pg.png)
-*Sign out page*
-
-![](documentation/screenshots/sign_out_msg.png)
-
-#### Recipe Form page
-
-* A form to submit with fields to complete to add a recipe to the public recipes page and to the user's list in the My Recipes page for CRUD functionality
-* Users can add text, paste text into fields. Images can be uploaded and a placeholder image is available if no image is supplied.
-* A Go Back button at the top to redirect users to the My Recipes page
-
-![](documentation/screenshots/recipe_add.png)
-*Recipe form*
-
-* A Submit Recipe button at the bottom to submit the completed form
-
-![](documentation/screenshots/submit_recipe.png)
-*Submit button*
-
-![Success message](documentation/screenshots/add_msg.png)
-
-#### 404 Page
-A 404 page was created to handle users' navigational errors and to direct them back to the website. The navigation menu and logo are visible on the page
-
-![](documentation/screenshots/404.png)
-
-#### 500 Page
-A 500 server error page was created to handle internal server errors
-
-![](documentation/screenshots/500_error.png)
-
-### Future Features
-* Improvement could be made to the search feature. During implementation with a clear function inside the search box it was found that this only cleared the search but left the search findings list. It was decided that better UX would be to clear back to the full list so the form was changed and an 'x' was added outside the box to reload the page. Given further time I would look for a neater solution.
-* The search function on the Recipes and My Recipes pages could be further refined to include filtering by category and organising the list in various orders e.g. alphabetised
-* A useful future feature would be to filter by the user's favourites
-* User sign-in with Google/Facebooks
-* Apply full CRUD functionality to user's own reviews
-* Currently images can be uploaded to the recipe form from the user's own computer or via a url. This could be further restricted by size and type to ensure consistency.
-* In future it would be a good idea change the default setting to draft for users recipes to require approval before publication so the admin can check the content is suitable and consistent with the site ethos and style. 
-
-### Skeleton
-### Wireframes
-
-The pdf files can be seen [here](https://github.com/siobhanlgorman/favoureats/tree/main/documentation/wireframes)
-
-* Home Page
-
-![](documentation/wireframes/home.png)
-
-* About Page
-
-![](documentation/wireframes/about.png)
-
-* Recipes Page
-
-![](documentation/wireframes/recipes.png)
-
-* My Recipes Page
-
-![](documentation/wireframes/myrecipes.png)
-
-* Recipe Detail Page
-
-![](documentation/wireframes/recipe_detail.png)
-
-* Sign In Page:
-
-![](documentation/wireframes/login_page.png)
-
-* Register Page:
-
-![](documentation/wireframes/register_page.png)
-
-* Recipe Form Page:
-
-![](documentation/wireframes/recipe_form_page.png)
-
-### Data Models
-There are two models for the database: A Recipe model and a Review model
-
-![Data Models](documentation/screenshots/data-models.png)
-
-The pdf of these models' tables can be seen [here](https://github.com/siobhanlgorman/favoureats/blob/main/documentation/data_models.pdf)
-
-### Surface
-
-## Design
-
-The design style of the website is minimalist, fresh and clean looking. 
-
-### Colours
-
-The following colour palette was used from [Coolors](https://coolors.co/ffffff-008000-f5f5f5-cccccc-3a3a3a):
-![](documentation/screenshots/colours.png)
-
-The colours are chosen to convey nature, fresh clean and nutritious: green, pale grey, dark grey, black and white. 
-
-The predominant colour is green (#008000): used for buttons, links and icons. Font colours are charcoal grey and white, adjusted for contrast. Shading is muted grey.
-
-### Typography
-
-The fonts selected were: [Poppins](https://fonts.google.com/specimen/Poppins) for the text and [Roboto](https://fonts.google.com/specimen/Roboto) for the headings. These were selected for their simple and elegant style.
-
-### Images
-
-The hero image was chosen as the food is primarily vegetarian. The image is simple and elegant and evokes natural, vegetarian cuisine. Images were selected for the recipes which made the food look appetising.
-
-# Technologies Used
-## Languages
-* [HTML5](https://en.wikipedia.org/wiki/HTML5) was used to build the front-end website
-* [CSS](https://en.wikipedia.org/wiki/CSS) was used to style the HTML and add responsiveness
-* [JavaScript](https://www.javascript.com/) (no custom JS) was used with Bootstrap to provide interaction on the front-end
-* [Bootstrap 5.1.3](https://getbootstrap.com/docs/5.0/getting-started/introduction/) was used to style the website, add responsiveness and interactivity
-* [Python](https://www.python.org/) was used to code the back end of the project
-* [PyPI](https://pypi.org/) to install the python packages
-  
-## Frameworks
-* [Django 3.2.8](https://docs.djangoproject.com/en/3.2/)
-* Django supporting libraries:
-  - [allauth](https://django-allauth.readthedocs.io/en/latest/installation.html) for authentication, registration, account management as well as 3rd party (social) account authentication
-  - [crispy-forms](https://django-crispy-forms.readthedocs.io/) to style the forms
-  - [summernote](https://summernote.org/) as editor
-  - [gunicorn](https://gunicorn.org/) as the server for Heroku
-  - [psycopg2](https://pypi.org/project/psycopg2/)as an adaptor for Python and PostgreSQL databases
-  - [dj-database](https://pypi.org/project/dj-database-url/) to parse the database URL from the environment variables in Heroku
-
-## Database
-* Heroku Postgres for the production database
-* SQLite for the local environment for automated testing
-
-## Other Technologies
-* [Cloudinary](https://cloudinary.com/) was used to host the static files and media
-* [Gitpod](https://cloudinary.com/) as the IDE
-* [Git](https://git-scm.com/) used for version control via the terminal in Gitpod
-* [GitHub](https://github.com/) used to store the code in the repository
-* [Heroku](https://www.heroku.com/) was used as the cloud based platform for deployment
-* [Fontawesome](https://fontawesome.com/) for icons
-* [Google Fonts](https://fonts.google.com/) for the fonts
-* [Balsamiq](https://balsamiq.com/) for the wireframes
-* [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) for inspection during development to check reponsiveness and contrast and JS errors in the console
-* [Favicon.io](https://favicon.io/favicon-converter/) for the favicon
-* [Techsini](https://techsini.com/multi-mockup/index.php) was used for the site mockups
-* [Google Chrome](https://www.google.com/intl/en_ie/chrome/) for previewing the project in the browser
-* [Google Sheets](https://www.google.com/sheets/about/) - for the database model tables
-* [Freelogodesign](https://www.freelogodesign.org/) for the leaf logo
-* [Coverage](https://coverage.readthedocs.io/) to generate a report on the automated testing
-* [W3C Markup Validation Service](https://validator.w3.org/)
-* [W3C CSS Validation Service(Jigsaw)](https://jigsaw.w3.org/css-validator/)
-* [PEP8](https://www.python.org/dev/peps/pep-0008/) to validate the Python code
-* [Picresize](https://picresize.com/) to resize images
-* [Coolors](https://coolors.co) to generate the colour palette
-
-## Testing
-The full testing documentation can be seen [here](https://github.com/siobhanlgorman/favoureats/blob/main/TESTING.md)
-
-## Deployment
-
-### Heroku
-#### 1. Creating the inital Django app
-* First follow these steps to create your app:
-add to local deployment section: here
-* Install Django and gunicorn: `pip3 install django gunicorn`
-* Install supporting database libraries dj_database_url and psycopg2 library: `pip3 install dj_database_url psycopg2`
-* Install Cloudinary libraries to manage photos: in the terminal window type `pip3 install dj-3-cloudinary-storage`
-* Create file for requirements: in the terminal window type `pip freeze --local > requirements.txt`
-* Create project: in the terminal window type `django-admin startproject project_name .`
-* Create app: in the terminal window type `python3 manage.py startapp app_name`
-* Add app to list of `installed apps` in settings.py file: `'app_name'`
-* Migrate changes: in the terminal window type `python3 manage.py migrate`
-* Run the server to test if the app is installed: in the terminal window type `python3 manage.py runserver`
-* If the app has been installed correctly the window will display `The install worked successfully! Congratulations!`
-
-#### 2. Create your Heroku app
-* Navigate to the Heroku website
-* In the Heroku browser window, create an account by entering your email address and a password
-* Activate the account through the authentication email sent to your email account
-* Click the new button and select create a new app from the dropdown menu
-* Enter a name for the application which must be unique, in this case the app name is 'favoureats'
-* Select a region, in this case Europe
-* Click create app
-
-#### 3. Create the Database
-* In the Heroku dashboard click on the Resources tab
-* Scroll down to Add-Ons, search for and select 'Heroku Postgres'
-* In the Settings tab, scroll down to 'Reveal Config Vars' and copy the text in the box beside DATABASE_URL.
-
-#### 4. Set up Environment Variables
-* In Gitpod create a new env.py file in the top level directory
-* Add env.py to the .gitignore file
-* In env.py import the os library
-* In env.py add `os.environ["DATABASE_URL"]` = "Paste in the text link copied above from Heroku DATABASE_URL" from step 3
-Insert yours here
-* In env.py add `os.environ["SECRET_KEY"] = "Make up your own random secret key"`
-* In Heroku Settings tab Config Vars enter the same secret key created in env.py by entering 'SECRET_KEY' in the box for 'KEY' and your randomly created secret key in the 'value' box.
-
-#### 5. Connect the environment variables to Django
-
-* In your Django 'settings.py' file type:
-
- ```
- from pathlib import Path
- import os
- import dj_database_url
-
- if os.path.isfile("env.py"):
-  import env
- ```
-* Remove the default insecure secret key in settings.py and replace with the link to the secret key variable i Heroku by typing: `SECRET_KEY = os.environ.get(SECRET_KEY)`
-* Comment out the `DATABASES` section in settings.py and replace with:
-```
-DATABASES = {
-  'default': 
-  dj_database_url.parse(os.environ.get("DATABASE_URL"))
-  }`
-```
-#### 6. Make migrations
-* In the terminal type:
-```
-python3 manage.py makemigrations`
-python3 manage.py migrate`
-```
-
-#### 7. Set up Cloudinary for static and media files storage
-* Create a Cloudinary account and from the 'Dashboard' in Cloudinary copy your url into the env.py file by typing: `os.environ["CLOUDINARY_URL"] = "cloudinary://<insert-your-url>"`
-* In Heroku  add cloudinary url to 'config vars'
-* In Heroku config vars add DISABLE_COLLECTSTATIC with value of '1' (note: this must be removed for final deployment)
-* Add Cloudinary libraries to installed apps section of `settings.py` in this order: 
- ```
- 'cloudinary_storage'
- 'django.contrib.staticfiles''
- 'cloudinary'
- ```
-* Connect Cloudinary to the Django app in `settings.py`:
-```
-STATIC_URL = '/static'
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'STATIC')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-MEDIA_URL = '/media/'
-DEFAULT_FILE_STORAGE =
-'cloudinary_storage.storage.MediaCloudinaryStorage'
-* Link file to the templates directory in Heroku 
-* Place under the BASE_DIR: TEMPLATES_DIR = os.path.join(BASE_DIR,
-'templates')
-```
-* Change the templates directory to TEMPLATES_DIR. Place within the TEMPLATES array: `'DIRS': [TEMPLATES_DIR]`
-* Add Heroku Hostname to ALLOWED_HOSTS: ```ALLOWED_HOSTS =
-['favoureats.herokuapp.com', 'localhost']```
-
-#### 8. Create `media`, `static` and `templates` folders in top level directory
-#### 9. Create Procfile in top level directory: 
-* In Procfile add: `web: gunicorn favoureats .wsgi`
-#### 10. In terminal add, commit, and push: 
-```
-git add <filename>
-git commit -m “Deployment Commit”
-git push
-```
-#### 11. Heroku Deployment: 
-* Click Deploy tab in Heroku
-* In the 'Deployment method' section select 'Github' and click the 'connect to Github' button to confirm.
-* In the 'search' box enter the Github repository name for the project: favoureats: https://github.com/siobhanlgorman/favoureats
-
-* Click search and then click connect to link the heroku app with the Github repository. The box will confirm that heroku is connected to the repository.
-
-#### 12. Final Deployment
-In the IDE: 
-* When development is complete change the debug setting to: `DEBUG = False` in `settings.py` 
-* In this project the [summernote](https://summernote.org/) editor was used so for this to work in Heroku add: `X_FRAME_OPTIONS = 'SAMEORIGIN'` to settings.py.
-* In Heroku settings config vars change the DISABLE_COLLECTSTATIC value to 0
-* Because DEBUG must be switched to True for development and False for production it is recommended that only manual deployment is used in Heroku. 
-* To manually deploy click the button 'Deploy Branch'. The default 'main' option in the dropdown menu should be selected in both cases. When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser. The live deployment of the project can be seen [here](https://favoureats.herokuapp.com)
-
-### Local Deployment: Forking and Cloning
-#### Forking the Repository
-
-* To fork the project navigate to the favoureats repository at https://github.com/siobhanlgorman/favoureats
-* Above the list of files click the dropdown code menu.
-* Select the https option and copy the link.
-* Open the terminal.
-* Change the current working directory to the desired destination location.
-* Click the 'Fork' button at the top right of the page. A forked copy of the repository will appear in your Repositories page.
-
-
-#### Cloning the Repository
-* On Github navigate to the main page of Favoureats at https://github.com/siobhanlgorman/favoureats
-* Above the list of files click the dropdown code menu.
-* Select the https option and copy the link.
-* Open the terminal.
-* Change the current working directory to the desired destination location.
-* Type the git clone command with the copied URL: 
-
-`git clone https://github.com/siobhanlgorman/favoureats.git`.
-* Press enter to create the local clone.
-* For the project to run an env.py file must be created as in step 4 of 'creating your Heroku app' above. As this is not stored in Github it will not be cloned with the rest of the files.
-
-## Credits
-
-* [Dennis Ivy 'Django To Do List App With User Registration & Login'](https://www.youtube.com/watch?v=llbtoQTt4qw&t=68s) was useful for full CRUD functionality application.
-
-* This tutorial was used to auto generate slugs from the front-end: [Kodnito](https://kodnito.com/posts/slugify-urls-django/)
-
-* The following tutorials were useful for automated testing:
-  * [Django Testing](https://www.youtube.com/watch?v=GBgRMdjAx_c)
-  * [Automated Tests - Day 6 - Django Bootcamp](https://www.youtube.com/watch?v=5E_xLmQXOZg)
-  * This series: [Django Testing Tutorial - What Is Testing? #1](https://www.youtube.com/watch?v=qwypH3YvMKc)
-
-
-* [Stack Overflow](https://stackoverflow.com/) and [Slack](https://slack.com/) were used for general queries
-
-### Images
-
-[Dinner Party](https://pixabay.com/images/id-1852926/) Image by <a href="https://pixabay.com/users/pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1852926">Pexels</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1852926">Pixabay</a>
-
-[Chickpea Curry](https://pixabay.com/images/id-1271639/) Image by <a href="https://pixabay.com/users/marekonline-1095186/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1271639">marekonline</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1271639">Pixabay</a>)
-
-[Lasagne by Daniele Sgura from Pexels](https://www.pexels.com/photo/close-up-photo-of-lasagna-on-ceramic-plate-4162496/)
-
-[Cookbook Image by <a href="https://pixabay.com/users/bru-no-1161770/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1375788">Bruno /Germany</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1375788">Pixabay</a>](https://pixabay.com/photos/cook-cookbook-side-enjoyment-meal-1375788/)
-
-[Tofu Photo by Ella Olsson from Pexels](https://www.pexels.com/photo/vegetable-salad-3026808/)
-
-[Chili image](https://pixabay.com/images/id-6383373/) by <a href="https://pixabay.com/users/ritae-19628/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6383373">RitaE</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6383373">Pixabay</a>
-
-[Sweet Potato Soup](https://pixabay.com/images/id-1776639/) image by <a href="https://pixabay.com/users/einladung_zum_essen-3625323/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1776639">Bernadette Wurzinger</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1776639">Pixabay</a>
-
-[Brown Bread](https://pixabay.com/images/id-1508064/) by <a href="https://pixabay.com/users/madmoissele-2895357/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1508064">madmoissele</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1508064">Pixabay</a>
-
-[Sourdough Bread](https://pixabay.com/images/id-3666570/) Image by <a href="https://pixabay.com/users/markcraemers-9384631/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3666570">markcraemers</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3666570">Pixabay</a>
-
-[Muesli](https://pixabay.com/images/id-1846085/) Image by <a href="https://pixabay.com/users/pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1846085">Pexels</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1846085">Pixabay</a>
-
-[Sicilian Stew](https://pixabay.com/images/id-1252654/) Image by <a href="https://pixabay.com/users/ion68-2001618/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1252654">Ion68</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1252654">Pixabay</a>
-
-[Pavlova](https://pixabay.com/images/id-5280271/) Image by <a href="https://pixabay.com/users/blandinejoannic-15617008/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5280271">Blandine JOANNIC</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5280271">Pixabay</a>
-
-[Pizza Image](https://pixabay.com/images/id-3007395/) by <a href="https://pixabay.com/users/igorovsyannykov-6222956/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3007395">Igor Ovsyannykov</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3007395">Pixabay</a>
-
-[Calamari](https://pixabay.com/images/id-2536527/) Image by <a href="https://pixabay.com/users/jonathanvalencia5-4638583/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2536527">Jonathan Valencia</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2536527">Pixabay</a>
-
-### Recipes
-
-Recipes are from my own handwritten recipe books apart from these:
-
-[Chili](https://www.theguardian.com/food/2020/oct/03/meera-sodha-recipe-vegan-oven-baked-chilli-butternut-squash-recipe)
-
-[Lasagne](https://www.theguardian.com/food/2020/feb/24/thomasina-miers-recipe-for-cheats-lasagne-with-ricotta-and-greens)
-
-[Sweet Potato and Ginger Soup](https://www.bbc.co.uk/food/recipes/sweet_potato_soup_62834)
-
-[Pavlova](https://www.bbcgoodfood.com/recipes/strawberry-pavlova)
-
-## Acknowledgements
-There would have been no submission without the following people:
-* My colleagues on the course: in particular:
-  - Elaine Roche for help with setting up local environment for automated testing
-  - Catriona McDonnell for constant support
-  - Moira Hartigan, Laura Hartnett, Miwa Mullane, Kavitha Santhanesh for resources, tips and support
-* Our Course Facilitator Kasia Bogucka: for always being there advising, encouraging and supporting
-* My mentor Tim Nelson: for his endless knowledge, patience and advice
