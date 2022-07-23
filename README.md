@@ -1,6 +1,9 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![Battleship Banner](https://github.com/anluke/battleship-game/blob/main/assets/images/readme_snips/battleship_banner.png?raw=true)
 
-Welcome anluke,
+# WELCOME TO GUITAR PORTAL
+
+
+This project was built for Code Institute's Portfolio 4 Assessment.
 
 This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
