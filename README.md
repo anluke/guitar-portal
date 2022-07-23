@@ -76,6 +76,12 @@ And it also does not allow users to delete or update posts they did not create.
     -   #### Site Administrator Goals
         1. As a Site Administrator I would like to be able to create, view, edit and delete bookings.    
         
+    -   #### Guitar Portal User Stories
+
+        As you can see below, all of the user stories are completed and they have all been tested as they were being implemented and through testing phase.
+<!-- 
+        ![Navbar-Logged](https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/navbar-logged.png?raw=true) -->
+
 
 # Layout
 -   ### Design
