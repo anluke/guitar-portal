@@ -61,9 +61,6 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
-X-FRAME-OPTIONS: SAMEORIGIN
-
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -73,6 +70,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+X_FRAME_OPTIONS:'SAMEORIGIN'
+
 
 ROOT_URLCONF = 'guitarportal.urls'
 
