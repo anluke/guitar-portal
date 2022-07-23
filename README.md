@@ -128,9 +128,22 @@ The application is responsive on all device sizes, thanks to the [Bootstrapious]
     -   #### I would like to add more options to the Sign In form and have Registration only be active once the user has verified their account through email address.
 <br>
 
--  #  Sections / Pages
+# Sections
 
- - sdsa
+- Navigation
+![Navbar](https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/navbar.png?raw=true)
+
+Above is a Navbar that's constisting of Logo at, **LOGIN** & **SIGNUP** in the middle and **Home, Blog, About, Create** on the right hand side.
+
+This is how **navbar** looks like when user is signed in:
+
+![Navbar-Logged](https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/navbar-logged.png?raw=true)
+
+
+
+
+
+
 
 <br>
 
