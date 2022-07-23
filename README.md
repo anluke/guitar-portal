@@ -128,8 +128,9 @@ The application is responsive on all device sizes, thanks to the [Bootstrapious]
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 -   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+-   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
-### Frameworks, Libraries & Programs Used
+### Frameworks, Libraries, Programs & Packages Used
 1. [Django:](https://www.djangoproject.com/)
     - The Python-based Django framework was used to set up the structure, functionalities,  data model and database of the website.
 1. [Bootstrapious Template:](https://bootstrapious.com/)
@@ -140,12 +141,16 @@ The application is responsive on all device sizes, thanks to the [Bootstrapious]
     - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
 1. [jQuery:](https://jquery.com/)
     - Originally used by my template. I am putting it on the list as it can be found within my files but I have not personally used it for this project.
-1. [Javascript:](https://en.wikipedia.org/wiki/JavaScript)  
-    - Used for loading Bootstrapious CSS Templates and to create Email JS and connect it to our 'Newsletter' button.
+1. [Email JS:](https://www.emailjs.com/)
+    - Send an email to the user or visiting guest when using 'Newsletter' submit form on our home page.
 1. [Git:](https://git-scm.com/)
     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 1. [GitHub:](https://github.com/)
     - GitHub is used to store the projects code after being pushed from Git.
+1. [Crispy Forms:](https://django-crispy-forms.readthedocs.io/en/latest/)
+    - To style the forms inside our Django app. Installed as a Django package.
+1. [Tinymce4 Lite:](https://karansthr.gitlab.io/fosstack/how-to-set-up-tinymce-in-django-app/index.html)
+    - WYSIWYG HTML Text Editor for 'Content' input form in our 'Create' tab.
 1. [Balsamiq:](https://balsamiq.com/)
     - Balsamiq was used to create the wireframes during the design process.
 1. [Lucidchart:](https://www.lucidchart.com/) was used to create the data model of the project .
@@ -162,21 +167,95 @@ The application is responsive on all device sizes, thanks to the [Bootstrapious]
 
 # Testing
 
+Testing was constistent throughout the deployment especially with Python.
+
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every pagefor HTML and CSS of the project. The issue is that this project is using a template and if loaded directly via link from Heroku or via GitPod link it will throw many errors as can be seen below:
 
 -   [W3C URI Validator](https://validator.w3.org/#validate_by_uri)    
-    <details><summary>HTML Summary - Direct Link</summary>
+    - <details><summary>HTML TEST</summary>
         <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/TESTING-IMG/HTML-TEST-IMG/html.png?raw=true">
     </details>  
 
-    But if you use the HTML files directly from the project without Python template tags there are no Major problems. The issue here is with the template as it has too many files that are intertwined and removing them broke my code so many times that I had no other choice but to leave it. I don't like submitting a test like this but I have spent hours on this. I tried testing some stuff with Tutor help and they told me that it could also be Django's issue with the template..
-    <details><summary>HTML Summary - Direct Link</summary>
-        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/TESTING-IMG/HTML-TEST-IMG/html.png?raw=true">
-    </details>  
-
--   [W3C URI Validator](https://validator.w3.org/#validate_by_uri)
-    - See the [URI Validator Results](https://github.com/renatalantos/booking-system/tree/main/restaurant/documents/screenshots/html%20validation)
+    HTML Summary tested without any Errors. There is a warning for my gallery. It is asking for heading elements but that whole section is filled with my pictures so I decided to leave it like that as it is not affecting functionality of my site and the TEST passed.  
+<br>
+    
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
-    - See the [CSS Validator Results](https://github.com/renatalantos/booking-system/blob/main/restaurant/documents/screenshots/css%20validation/Jigsaw%20CSS%20Validator.JPG)
--   [Gitpod Pylint](https://pylint.org/)
-    - See the [Gitpod Pylint Results](https://github.com/renatalantos/booking-system/tree/main/restaurant/documents/screenshots/pylint%20validation)    
+    - <details><summary>CSS TEST</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/TESTING-IMG/CSS-TEST-IMG/css.png?raw=true">
+    </details>  
+    CSS Summary tested without any errors. CSS did give warnings and when I looked into it they are just webkit tools. They are related to Google Fonts and vendor extension prefixes which will not affect the CSS performance. A lot of them have also been imported through Bootstrapious.
+
+```
+    -webkit-transition    |    -webkit-text-fill-color     |    -webkit-box-shadow     |    -webkit-text-decoration-skip-ink
+```  
+
+- [PEP8 Python Validation](http://pep8online.com/)  
+
+    The only warnings Python gave was 'line-too-long' which I tried to fix in 'settings.py' file and other files and it did not look right and in some cases was breaking the page. I have decided to leave them in as they are not major issues:
+    #### Accounts
+    - <details><summary>urls.png</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/TESTING-IMG/Python/Accounts/urls.png?raw=true">
+    </details>  
+
+    - <details><summary>views.png</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/TESTING-IMG/Python/Accounts/views.png?raw=true">
+    </details>  
+
+    #### Guitarportal
+    - <details><summary>settings.png</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/TESTING-IMG/Python/Guitarportal/settings.png?raw=true">
+    </details>  
+
+    - <details><summary>urls.png</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/TESTING-IMG/Python/Guitarportal/urls.png?raw=true">
+    </details> 
+
+    #### Marketing
+    - <details><summary>admin.png</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/TESTING-IMG/Python/Marketing/admin.png?raw=true">
+    </details>  
+
+    - <details><summary>models.png</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/TESTING-IMG/Python/Marketing/models.png?raw=true">
+    </details>  
+
+    #### Posts
+    - <details><summary>admin.png</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/TESTING-IMG/Python/Posts/admin.png?raw=true">
+    </details>  
+
+    - <details><summary>forms.png</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/TESTING-IMG/Python/Posts/forms.png?raw=true">
+    </details>  
+
+    - <details><summary>models.png</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/TESTING-IMG/Python/Posts/models.png?raw=true">
+    </details>  
+
+    - <details><summary>views.png</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/TESTING-IMG/Python/Posts/views.png?raw=true">
+    </details>  
+    <br>
+- ### Lighthouse  
+  
+  Lighthouse was used to test Performance, Best Practices, Accessibility and SEO on Desktop. Snippet bellow:
+
+    - <details><summary>Lighthouse Desktop Test</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/lighthouse/lighthouse_desktop.png?raw=true">
+    </details>  
+
+    - <details><summary>Lighthouse Mobile Test</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/lighthouse/lighthouse_mobile.png?raw=true">
+    </details>  
+
+    Due to outdated jQuery version and other files that came with 'Bootstrapious' there are slight discrepancies, but it's functional and the test passed.
+
+<br>
+
+-   [JSHINT JavaScript Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+
+    As I didn't write much JS, I can only post emailJS that I added to submit a newsletter request. Snippet below:
+
+    - <details><summary>JSHINT</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/lighthouse/lighthouse_desktop.png?raw=true">
+    </details>  
