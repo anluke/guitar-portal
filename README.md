@@ -79,8 +79,9 @@ And it also does not allow users to delete or update posts they did not create.
     -   #### Guitar Portal User Stories
 
         As you can see below, all of the user stories are completed and they have all been tested as they were being implemented and through testing phase.
-<!-- 
-        ![Navbar-Logged](https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/navbar-logged.png?raw=true) -->
+
+
+        ![Navbar](https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/user_stories.png?raw=true)
 
 
 # Layout
