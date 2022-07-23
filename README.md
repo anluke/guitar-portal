@@ -24,10 +24,9 @@ This project is a fictitious portal for famous guitar players and their signatur
 
     - Design
         - Colour scheme
-        - Typography
         - Images
     - Wireframes
-        - Discrepancy with Original Ideas
+        - Ideas
         - Links to Wireframes
 * [Features](#features)
     - Responsivity
@@ -39,8 +38,8 @@ This project is a fictitious portal for famous guitar players and their signatur
     - Frameworks, Libraries and Programs Used  
 
 * [Testing](#testing)
-    - Testing User Stories from User Experience (UX) Section
-    - Further Testing
+    - Validation Testing
+    - Manual Testing
     - Unresolved Bugs 
 
 * [Deployment](#deployment)
@@ -79,13 +78,13 @@ And it also does not allow users to delete or update posts they did not create.
     -   #### Colour Scheme
         -   The main colours in the website theme for header, background, footer and text labels are white, light gray, blue and black.
     -   #### Imagery
-        -   Imagery was chosen to go with the vivid pictures capturing the moment or just a good angle with the guitar, adding more meaning to the blog post. Photos chosen were 'Portrait' formats.
+        -   As for Imageru I chose to go with the vivid pictures capturing the moment or just a good angle with the guitar, adding more meaning to the blog post. Photos chosen were 'Portrait' formats.
 
 *   ### Wireframes
-    -   #### Discrepancy with original ideas
+    -   #### Ideas
         -   I had an idea of building a blog or expanding on the blog created by Matt during 'I Think Therefore I Blog' lesson. However I didn't feel like it was something I'd like to do, expand on already finished project. So I went with a Django project advised to me by my Mentor. I followed an idea from the Boostrapious template but adjusted it to my liking. Template looks great and it comes with pleny of configuration that may not be necessary. However I was reluctant to start playing around with other files as I did not want to break the functionality of the site.
-    -   #### Links to Wireframes
 
+    -   #### Links to Wireframes
 
         <details><summary>Desktop Wireframes</summary>
 
@@ -255,7 +254,30 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   [JSHINT JavaScript Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
 
     As I didn't write much JS, I can only post emailJS that I added to submit a newsletter request. Snippet below:
+    The guide was followed by Code Institite's lesson on Email JS.
 
     - <details><summary>JSHINT</summary>
-        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/lighthouse/lighthouse_desktop.png?raw=true">
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/TESTING-IMG/JavaScript/jshint%20test.png?raw=true">
     </details>  
+
+
+### Manual Testing
+
+* The Signup, Login and Logout all working correctly.
+* All the internal links are working and bring the user to the right page on the website.
+* All the external links are working and bring the user to the right social media page by 
+  opening a new browser tab.
+* The Categories Page shows the genres and guitar brands. It picks up new categories from created posts.
+* The newsletter submit form takes the email and sends the newsletter welcome email to the user. The don't have to be logged in to use that service.
+* The pagination system is working. It adds another page after 3 posts or so.
+* The comment form has no issues and it submits a new comment once the form is completed by a
+  registered user. 
+* CRUD is working. User is able to create, read, update and and delete their own posts. Superuser is able to delete posts in the backend 'admin' area regardless of the level.
+* When switching between accounts, the 'views' icon is incrementing as it should be.
+* When comment is posted it also incremenets an icon on the latest page section and the actual blog post.
+
+<br>
+
+### Bugs
+
+The only bug I could think of right now is the console bug.
