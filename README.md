@@ -8,7 +8,8 @@
 
 This project was built for Code Institute's Portfolio 4 Assessment.
 
-This project is a fictitious portal for famous guitar players and their signature guitars.  
+This project is a fictitious portal for famous guitar players and their signature guitars.
+It's a great read but everyone's welcome to post their own stories about the guitars they own.  
 
 
 ![Mockup](https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/mockup/mockup.png?raw=true)
@@ -30,8 +31,11 @@ This project is a fictitious portal for famous guitar players and their signatur
         - Links to Wireframes
 * [Features](#features)
     - Responsivity
-    - Interactive Elements
+        - Interactive elements
+    - Sections / Pages
     - Features to add in future
+
+* [Sections](#sections)
 
 * [Technologies Used](#technologies-used) 
     - Languages Used
@@ -105,20 +109,30 @@ And it also does not allow users to delete or update posts they did not create.
 
 # Features
 
+
+
 -   ### Responsivity
 
 The application is responsive on all device sizes, thanks to the [Bootstrapious](https://bootstrapious.com/) (bootstrap4)
  theme. In mobile view there is a collapsible menu icon. All images, text labels, forms get appropriately resized.
 
 
--   ### Interactive elements
-    -   #### Nav links for Home, Menu, Blog, About, My bookings, Signup, Login and Logout link.
-    -   #### Form input fields on signup, logout, update and delete posts.
-    -   #### Buttons - including form buttons (signup, login, logout, table booking, edit and delete posts buttons and page navigation buttons (when there is too many blog posts)
+-  #### Interactive elements
+    * Nav links for Home, Menu, Blog, About, My bookings, Signup, Login and Logout link.
+    * Form input fields on signup, logout, update and delete posts.
+    * Buttons - including form buttons (signup, login, logout, table booking, edit and delete posts buttons and page navigation buttons (when there is too many blog posts)
 
 -   ### Features to add in future   
-    -   #### I would like to add a dropdown list for registered users to acess their account-related activites like view bookings, login and logout.
+    -   #### I would like to add a notification pop up that shows up on screen when user logs in/logs out.
+    -   #### I would like to add a possibility of deleting comments but only if you are an owner.
+    -   #### I would like to add more options to the Sign In form and have Registration only be active once the user has verified their account through email address.
+<br>
 
+-  #  Sections / Pages
+
+ - sdsa
+
+<br>
 
 # Technologies Used
 
@@ -261,23 +275,91 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
     </details>  
 
 
-### Manual Testing
+- ### Manual Testing
 
-* The Signup, Login and Logout all working correctly.
-* All the internal links are working and bring the user to the right page on the website.
-* All the external links are working and bring the user to the right social media page by 
-  opening a new browser tab.
-* The Categories Page shows the genres and guitar brands. It picks up new categories from created posts.
-* The newsletter submit form takes the email and sends the newsletter welcome email to the user. The don't have to be logged in to use that service.
-* The pagination system is working. It adds another page after 3 posts or so.
-* The comment form has no issues and it submits a new comment once the form is completed by a
-  registered user. 
-* CRUD is working. User is able to create, read, update and and delete their own posts. Superuser is able to delete posts in the backend 'admin' area regardless of the level.
-* When switching between accounts, the 'views' icon is incrementing as it should be.
-* When comment is posted it also incremenets an icon on the latest page section and the actual blog post.
+    * The Signup, Login and Logout all working correctly.
+
+    * All the internal links are working and bring the user to the right page on the website.
+
+    * All the external links are working and bring the user to the right social media page by 
+    opening a new browser tab.
+    
+    * The Categories Page shows the genres and guitar brands. It picks up new categories from created posts.
+
+    * The newsletter submit form takes the email and sends the newsletter welcome email to the user. The don't have to be logged in to use that service.
+
+    * The pagination system is working. It adds another page after 3 posts or so.
+
+    * The comment form has no issues and it submits a new comment once the form is completed by a
+        registered user. 
+
+    * CRUD is working. User is able to create, read, update and and delete their own posts. Superuser is able to delete posts in the backend 'admin' area regardless of the level.
+
+    * When switching between accounts, the 'views' icon is incrementing as it should be.
+
+    * When comment is posted it also incremenets an icon on the latest page section and the actual blog post.
 
 <br>
 
-### Bugs
+- ### Unresolved Bugs
 
-The only bug I could think of right now is the console bug.
+
+    - <details><summary>Chrome Console</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/TESTING-IMG/Console%20test/console.png?raw=true">
+    </details>  
+
+    Tested this feature few days ago just after successfully uploading to Heroku. I was told by one od the Tutors that is' most deifinitely an issue with Cloudinary in the backend but everything else seems to work so this is 1 error is not affecting my site.
+
+
+## Deployment
+
+The site was deployed via Heroku.
+1.  Log in to Heroku or create an account if required.
+2.  Then, click the button labelled New from the dashboard in the top right corner and from the drop-down menu select Create New App.  You must enter a unique app name
+3.  Next, select your region.
+4.  Click on the Create App button.
+5.  In your app go to Resources tab and add a Heroku Postgres database.
+6.  The next page you will see is the project’s **Deploy Tab**. Click on the Settings Tab and scroll down to **Config Vars** and enter:
+    *   **CLOUDINARY_URL** = your cloudinary key
+    *   **DATABASE_URL** = the url of your heroku postgres database
+    *   **SECRET_KEY** = a secret key for your app.
+    *   **PORT = 8000**
+    *   **DISABLE_COLLECTSTATIC = 1** during development and remove when deploying to production
+
+7.  Scroll to the top of the page and now choose the Deploy tab.
+8.  Select Github as the deployment method.
+9.  Confirm you want to connect to GitHub.
+10. Search for the repository name and click the connect button.
+11. Scroll to the bottom of the deploy page and select preferred deployment type:
+12. Click either Enable Automatic Deploys for automatic deployment when you push updates to Github.
+13. Select the correct branch for deployment from the drop-down menu and click **Deploy Branch** for manual deployment.
+
+NB: Ensure in Django settings, **DEBUG is False**, create a **Procfile** and save database and cloudinary urls and secret key to **env.py.**
+
+## Credits
+
+*   Bootstrapious template downloaded from [Bootstrapios.com](https://bootstrapious.com/)
+*   MS4 Project Preparation & Planning from [Code Institute's YouTube Channel](https://www.youtube.com/watch?v=qAseQckru9o)
+*   Got a lot of help in understanding Models, Views from [TheNetNinja YouTube Channel](https://www.youtube.com/watch?v=n-FTlQ7Djqc&list=PL4cUxeGkcC9ib4HsrXEYpQnTOTZE1x0uc)
+*   [Just Django](https://www.youtube.com/c/JustDjango)helped me out greatly with understanding my Models and also template tags. I based my layout on his template but removed some things I did not need and accomodated for my purpose.
+*   HERO image from: [PRS Guitars](https://prsguitars.com/)
+*   Banner cover image with Quote [Wallpapercave](https://wallpapercave.com/wp/KARQiCN.jpg)
+*   Gallery Image 1: James Hetfield [faceoffrockshow](https://www.faceoffrockshow.com/post/james-hetfield)
+*   Gallery Image 2: Mark Tremonti [musicradar.com](https://www.musicradar.com/news/mark-tremonti-my-top-5-tips-for-playing-live)
+*   Gallery Image 2: Dan Donegan [nme.com](https://www.nme.com/wp-content/uploads/2022/07/Disturbed-Dan-Donegan-696x442.jpg)
+*   Gallery Image 3: Adam Dutkiewicz [loudwire.com](https://loudwire.com/killswitch-engage-adam-d-pandemic-depression-worst-year-my-life/)
+*   Blog Story 1 video [Mark Tremonti](https://www.youtube.com/watch?v=xG6NctwsOxs)
+*   Blog Story 2: video [James Hetfield](https://www.youtube.com/watch?v=1Eq9RVKT9XQ)
+*   Blog Story 3: video [Dimebag Darrell](https://www.youtube.com/watch?v=p40B6-p5u8w&feature=emb_title)
+
+
+## Special Thanks:
+
+- To all the Tutors, especially Scott and Ger. They helped me out when I was badly stuck.
+- Also want to thank my Mentor for his support and guidance and the material he sent that helped me get the better idea for this project.
+
+
+## Plans for implementation
+
+- Project was hard. I wanted to do so much more but I couldn't risk it. There is definitely room for improvement but I wanted to get at least a working MVP with CRUD implementation that looks nice and can be implemented down the line.
+- I am open to all the suggestions. 😊
