@@ -61,6 +61,9 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
+X-FRAME-OPTIONS: SAMEORIGIN
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
