@@ -1,4 +1,4 @@
-![Battleship Banner](https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/title.png?raw=true)
+![GuitarPortal](https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/title.png?raw=true)
 
 # WELCOME TO GUITAR PORTAL  
 
@@ -53,8 +53,8 @@ It's a great read but everyone's welcome to post their own stories about the gui
 
 # Introduction
 
-Guitar Portal is a fan based page. The name is just 'portal' but it is actually a blog. The intro already tells you that this is a site that will cover guitar instruments.  
-It enables user to view the posts but not comment until they are registered. It also does not allow users to create posts or delete them.
+Guitar Portal is a fan-based page. The name is just 'portal' but it is a blog. The intro already tells you that this is a site that will cover guitar instruments.  
+It enables the user to view the posts but not comment until they are registered. It also does not allow users to create posts or delete them.
 And it also does not allow users to delete or update posts they did not create.
 
 
@@ -64,13 +64,13 @@ And it also does not allow users to delete or update posts they did not create.
 
     -   #### Site User
 
-        1. As a Site User I'd like to register for an account and login afterward.
-        2. As a Site User I'd like to View the list of created posts.
+        1. As a Site User I'd like to register for an account and log in afterwards.
+        2. As a Site User I'd like to view the list of created posts.
         3. As a Site User I'd like to Open a post and view it's contents.
         4. As a Site User I'd like to sign up for newsletter be that registered or guest without registering.
-        5. As a Site User I'd like to View Latest Posts made by all site users.
-        6. As a Site User I'd like to View Comments and Views on Blog posts.
-        7. As a Site User I'd like to View my Login status at Navbar.
+        5. As a Site User I'd like to view Latest Posts made by all site users.
+        6. As a Site User I'd like to view comments and Views on Blog posts.
+        7. As a Site User I'd like to view my log in status at Navbar.
         
 
     -   #### Site Administrator Goals
@@ -82,11 +82,11 @@ And it also does not allow users to delete or update posts they did not create.
     -   #### Colour Scheme
         -   The main colours in the website theme for header, background, footer and text labels are white, light gray, blue and black.
     -   #### Imagery
-        -   As for Imageru I chose to go with the vivid pictures capturing the moment or just a good angle with the guitar, adding more meaning to the blog post. Photos chosen were 'Portrait' formats.
+        -   As for Imagery I chose to go with the vivid pictures capturing the moment or just a good angle with the guitar, adding more meaning to the blog post. Photos chosen were 'Portrait' formats.
 
 *   ### Wireframes
     -   #### Ideas
-        -   I had an idea of building a blog or expanding on the blog created by Matt during 'I Think Therefore I Blog' lesson. However I didn't feel like it was something I'd like to do, expand on already finished project. So I went with a Django project advised to me by my Mentor. I followed an idea from the Boostrapious template but adjusted it to my liking. Template looks great and it comes with pleny of configuration that may not be necessary. However I was reluctant to start playing around with other files as I did not want to break the functionality of the site.
+        -   I had an idea of building a blog or expanding on the blog created by Matt during 'I Think Therefore I Blog' lesson. However, I didn't feel like it was something I'd like to do, expand on already finished project. So I went with a Django project advised to me by my Mentor. I followed an idea from the Boostrapious template but adjusted it to my liking. The Template looks great and it comes with pleny of configuration that may not be necessary. However I was reluctant to start playing around with other files as I did not want to break the functionality of the site.
 
     -   #### Links to Wireframes
 
@@ -168,7 +168,7 @@ A banner with the famous quote from Mr. Jimmy Page. It separates the Latest blog
 
 ![Latest Blog](https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/latest%20blogs.png?raw=true)  
 
-Leatest Blog section that covers our latest created blogs. As they are created the list moves from left to right and updates accordingly.
+Latest Blog section that covers our latest created blogs. As they are created the list moves from left to right and updates accordingly.
 
 
 ## Newsletter section:
@@ -186,7 +186,7 @@ Here we can see our Newsletter section. User can input their email address and t
 
 ![Footer](https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/footer.png?raw=true)  
 
-Site footer is at the bototm of the page, featuring company name, gmail & Social Media section.
+Site footer is at the bottom of the page, featuring Company Name, Email & Social Media section.
 
 
 
@@ -196,7 +196,7 @@ Site footer is at the bototm of the page, featuring company name, gmail & Social
         <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/blog.png?raw=true">
 </details>
 
-Blog is the site where you can see all the blogs, and make use of the Navigation bar to switch between slides if there's more then 3-4 blogs posted.
+Blog is the site where you can see all the blog posts, and make use of the Navigation bar to switch between slides if there's more then 3-4 blogs posted.
 
 It has a category section that displays all the current 'Active' categories that the users selected and also latest posts on the top.
 
@@ -424,7 +424,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/TESTING-IMG/Console%20test/console.png?raw=true">
     </details>  
 
-    Tested this feature few days ago just after successfully uploading to Heroku. I was told by one od the Tutors that is' most deifinitely an issue with Cloudinary in the backend but everything else seems to work so this is 1 error is not affecting my site.
+    Tested this feature few days ago just after successfully uploading to Heroku. I was told by one of the Tutors that it is most likely and issue between Heroku and Cloudinary Everything else seems to work so this is only error which does not seem to be affecting my site's functionality.
 
 
 ## Deployment
@@ -477,5 +477,6 @@ NB: Ensure in Django settings, **DEBUG is False**, create a **Procfile** and sav
 
 ## Plans for implementation
 
-- Project was hard. I wanted to do so much more but I couldn't risk it. There is definitely room for improvement but I wanted to get at least a working MVP with CRUD implementation that looks nice and can be implemented down the line.
-- I am open to all the suggestions. 😊
+- Project was hard. I wanted to do so much more but I couldn't risk it as I was quite late to start with already.  
+There is definitely room for improvement but I wanted to get at least a working MVP with CRUD implementation that looks nice and can be implemented down the line.
+- I have learned a lot during this PP4.
