@@ -130,7 +130,7 @@ The application is responsive on all device sizes, thanks to the [Bootstrapious]
 
 # Sections
 
-- Navigation
+## Navigation
 ![Navbar](https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/navbar.png?raw=true)
 
 Above is a Navbar that's constisting of Logo at, **LOGIN** & **SIGNUP** in the middle and **Home, Blog, About, Create** on the right hand side.
@@ -139,13 +139,116 @@ This is how **navbar** looks like when user is signed in:
 
 ![Navbar-Logged](https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/navbar-logged.png?raw=true)
 
+And also below is the display of site navbar when reduced with 'hamburger' menu. Navbar is fully responsive.
+
+![Hamb-Nav-Open](https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/hamb-nav-open.png?raw=true)
+
+
+## Hero
+
+![Hero](https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/hero.png?raw=true)
+
+## Home
+
+<details><summary>Home Page Full (Click to View)</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/home-page-large.png?raw=true">
+</details>  
+
+- Site home page has a guitar for the hero image. A small button to scroll down a bit and a introduction.  
+- Just below the hero and intro section there is a small banner with 'famous' quote. And below that we have our Latest Blogs. This is where they will appear as they're created.
+
+
+## Banner
+
+![Banner](https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/side-banner.png?raw=true)  
+A banner with the famous quote from Mr. Jimmy Page. It separates the Latest blog section and our Hero section.
+
+
+## Latest Blogs:
+
+![Latest Blog](https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/latest%20blogs.png?raw=true)  
+
+Leatest Blog section that covers our latest created blogs. As they are created the list moves from left to right and updates accordingly.
+
+
+## Newsletter section:
+
+![Newsletter](https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/newsletter.png?raw=true)
+
+Here we can see our Newsletter section. User can input their email address and they should receive an introductionary email from our Site.
+
+<details><summary>Email Received Proof (Click to View)</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/email-received.png?raw=true">
+</details>  
+
+
+## Footer
+
+![Footer](https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/footer.png?raw=true)  
+
+Site footer is at the bototm of the page, featuring company name, gmail & Social Media section.
 
 
 
+## Blog
+
+<details><summary>Blog Post Section (Click to View)</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/blog.png?raw=true">
+</details>
+
+Blog is the site where you can see all the blogs, and make use of the Navigation bar to switch between slides if there's more then 3-4 blogs posted.
+
+It has a category section that displays all the current 'Active' categories that the users selected and also latest posts on the top.
+
+It also features the number of views by users that are logged in along with the number of comments aside.
+
+<details><summary>Blog Post As Author/Owner (Click to View)</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/blog-post-author.png?raw=true">
+</details>  
+
+<details><summary>Blog Post As Non Owner (Click to View)</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/blog-post-nonauthor.png?raw=true">
+</details>  
+
+This shows that admin created the first post and can delete that one but he can't delete or update Jonathan's post.
+
+An Admin account is just used a normal user and if it would be necessary to delete that post it can be done through Admin portal. Deletion from the portal is something we can expand this project down the line.
+
+
+## Sign up Section
+
+![Sign Up](https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/signup.png?raw=true)
+
+We have our three input forms for signing in. User needs to follow the guide provided under the input forms in order to successfully create an account. After he creates an account it automatically logs him in.
+
+
+## Log in Section
+
+![Log In](https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/login.png?raw=true)
+
+Similar to our Sign up form. It only has two input forms. Password and Username.
+
+
+## About
+
+
+And below is our About page. It only holds text and it's purpose is to educate user on the purpose of the site along with some information for the future projects, etc.
+
+<details><summary>About Section (Click to View)</summary>
+        <img src="https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/about.png?raw=true">
+</details>
+
+
+## Admin Section
+
+And of course we have our Admin section. We need to access this section by going into 'SITE URL' and then just add **/admin/** at the end.
+
+![Admin Logged](https://github.com/anluke/guitar-portal/blob/main/README-IMAGES/LINKS/admin-logged.png?raw=true)
 
 
 
 <br>
+
 
 # Technologies Used
 
