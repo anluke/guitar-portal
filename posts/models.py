@@ -47,7 +47,7 @@ class Comment(models.Model):
         return self.user.username
 
 
-#POST
+# POST
 class Post(models.Model):
     title = models.CharField(max_length=100)
     overview = models.TextField()
@@ -59,38 +59,31 @@ class Post(models.Model):
     categories = models.ManyToManyField(Category)
     featured = models.BooleanField()
 
-
     def __str__(self):
         return self.title
-
 
     def get_absolute_url(self):
         return reverse('post-detail', kwargs={
             'id': self.id
         })
-        
 
     def get_update_url(self):
         return reverse('post-update', kwargs={
             'pk': self.pk
         })
 
-
     def get_delete_url(self):
         return reverse('post-delete', kwargs={
             'pk': self.pk
         })
 
-
     @property
     def get_comments(self):
         return self.comments.all().order_by('-timestamp')
 
-    
     @property
     def comment_count(self):
         return Comment.objects.filter(post=self).count()
-
 
     @property
     def view_count(self):

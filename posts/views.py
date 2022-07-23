@@ -31,7 +31,7 @@ def index(request):
         new_signup = Signup()
         new_signup.email = email
         new_signup.save()
-    
+
     context = {
         'object_list': featured,
         'latest': latest,
@@ -125,7 +125,7 @@ def post_update(request, id):
         request.FILES or None,
         instance=post)
     author = get_author(request.user)
-    if post.author == request.user.author: #checks if requestor is an owner
+    if post.author == request.user.author:  # checks if requestor is an owner
         if request.method == "POST":
             if form.is_valid():
                 form.instance.author = author
@@ -144,6 +144,6 @@ def post_update(request, id):
 @login_required(login_url="/accounts/login/")
 def post_delete(request, id):
     post = get_object_or_404(Post, id=id)
-    if post.author == request.user.author: #checks if requestor is an owner
+    if post.author == request.user.author:  # checks if requestor is an owner
         post.delete()
         return redirect(reverse("post-list"))
